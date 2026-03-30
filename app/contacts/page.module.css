@@ -1,0 +1,116 @@
+.pageHero {
+  position: relative;
+  padding: 160px 0 80px;
+  text-align: center;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.blob1 {
+  width: 400px;
+  height: 400px;
+  top: -120px;
+  right: -80px;
+}
+
+.blob2 {
+  width: 300px;
+  height: 300px;
+  bottom: -60px;
+  left: -100px;
+}
+
+.heroSub {
+  max-width: 560px;
+  margin: var(--space-md) auto 0;
+  font-size: 1.1rem;
+}
+
+/* Contact Grid */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.cardsCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactCard h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-xs);
+}
+
+.contactLink {
+  font-weight: 600;
+  color: var(--color-sunrise);
+  transition: color var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--color-sunrise-dark);
+}
+
+.contactNote {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+.address {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Map */
+.mapCol {
+  position: sticky;
+  top: 100px;
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.mapCaption {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-md);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapCol {
+    position: static;
+  }
+
+  .mapWrapper {
+    height: 350px;
+  }
+}
