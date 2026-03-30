@@ -1,6 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import imgPlayroom from "../../public/images/gallery/playroom.png";
+import imgBedroom from "../../public/images/gallery/bedroom.png";
+import imgArts from "../../public/images/gallery/arts.png";
+import imgPlayground from "../../public/images/gallery/playground.png";
+
 export const metadata = {
   title: "О нас",
   description:
@@ -123,10 +128,10 @@ export default function AboutPage() {
           {/* Photo Gallery */}
           <div className={styles.galleryGrid}>
             {[
-              { src: "/images/gallery/playroom.png", alt: "Светлая игровая комната Славный Малый" },
-              { src: "/images/gallery/bedroom.png", alt: "Уютная спальня для дневного сна" },
-              { src: "/images/gallery/arts.png", alt: "Творческая зона для занятий" },
-              { src: "/images/gallery/playground.png", alt: "Безопасная детская площадка" },
+              { src: imgPlayroom, alt: "Светлая игровая комната Славный Малый" },
+              { src: imgBedroom, alt: "Уютная спальня для дневного сна" },
+              { src: imgArts, alt: "Творческая зона для занятий" },
+              { src: imgPlayground, alt: "Безопасная детская площадка" },
             ].map((img, i) => (
               <div key={i} className={styles.galleryItem}>
                 <Image 
@@ -135,6 +140,7 @@ export default function AboutPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className={styles.galleryImg}
+                  placeholder="blur"
                 />
               </div>
             ))}

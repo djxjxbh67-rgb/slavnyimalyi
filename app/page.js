@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import imgPlayroom from "../public/images/gallery/playroom.png";
 
 export default function Home() {
   return (
@@ -114,10 +115,11 @@ export default function Home() {
         <div className="container">
           <div className={styles.videoWrapper}>
             <Image 
-              src="/images/gallery/playroom.png"
+              src={imgPlayroom}
               alt="Видеоэкскурсия по детскому саду"
               className={styles.videoImg}
               fill
+              placeholder="blur"
             />
             <div className={styles.playBtn}></div>
           </div>
