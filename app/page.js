@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -104,6 +105,21 @@ export default function Home() {
                 <p>{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== VIDEO TOUR ==================== */}
+      <section className={styles.videoSection}>
+        <div className="container">
+          <div className={styles.videoWrapper}>
+            <Image 
+              src="/images/gallery/playroom.png"
+              alt="Видеоэкскурсия по детскому саду"
+              className={styles.videoImg}
+              fill
+            />
+            <div className={styles.playBtn}></div>
           </div>
         </div>
       </section>

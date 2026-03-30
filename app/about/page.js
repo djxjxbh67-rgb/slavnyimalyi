@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -118,6 +119,27 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          {/* Photo Gallery */}
+          <div className={styles.galleryGrid}>
+            {[
+              { src: "/images/gallery/playroom.png", alt: "Светлая игровая комната Славный Малый" },
+              { src: "/images/gallery/bedroom.png", alt: "Уютная спальня для дневного сна" },
+              { src: "/images/gallery/arts.png", alt: "Творческая зона для занятий" },
+              { src: "/images/gallery/playground.png", alt: "Безопасная детская площадка" },
+            ].map((img, i) => (
+              <div key={i} className={styles.galleryItem}>
+                <Image 
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className={styles.galleryImg}
+                />
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
     </>
