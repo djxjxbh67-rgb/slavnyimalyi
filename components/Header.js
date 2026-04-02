@@ -6,7 +6,14 @@ import styles from "./Header.module.css";
 
 const navLinks = [
   { href: "/", label: "Главная" },
-  { href: "/about/", label: "О нас" },
+  {
+    href: "/about/",
+    label: "О нас",
+    children: [
+      { href: "/team/", label: "Наша команда" },
+      { href: "/documents/", label: "Пакет документов" },
+    ],
+  },
   { href: "/groups/", label: "Группы" },
   { href: "/services/", label: "Услуги" },
   { href: "/pricing/", label: "Цены" },
@@ -50,14 +57,35 @@ export default function Header() {
         >
           <ul className={styles.navList}>
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li
+                key={link.href}
+                className={link.children ? styles.hasDropdown : ""}
+              >
                 <Link
                   href={link.href}
                   className={styles.navLink}
                   onClick={() => setIsMobileOpen(false)}
                 >
                   {link.label}
+                  {link.children && (
+                    <span className={styles.chevron} aria-hidden="true">›</span>
+                  )}
                 </Link>
+                {link.children && (
+                  <ul className={styles.dropdown}>
+                    {link.children.map((child) => (
+                      <li key={child.href}>
+                        <Link
+                          href={child.href}
+                          className={styles.dropdownLink}
+                          onClick={() => setIsMobileOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

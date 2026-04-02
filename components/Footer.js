@@ -38,6 +38,8 @@ export default function Footer() {
               <li><Link href="/groups/">Группы</Link></li>
               <li><Link href="/services/">Услуги</Link></li>
               <li><Link href="/pricing/">Цены</Link></li>
+              <li><Link href="/team/">Команда</Link></li>
+              <li><Link href="/documents/">Документы</Link></li>
               <li><Link href="/contacts/">Контакты</Link></li>
             </ul>
           </div>

@@ -1,0 +1,94 @@
+/* ========== PAGE HERO ========== */
+.pageHero {
+  position: relative;
+  padding: 160px 0 80px;
+  text-align: center;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.blob1 {
+  width: 400px;
+  height: 400px;
+  top: -120px;
+  right: -80px;
+}
+
+.blob2 {
+  width: 300px;
+  height: 300px;
+  bottom: -60px;
+  left: -100px;
+}
+
+.heroSub {
+  max-width: 560px;
+  margin: var(--space-md) auto 0;
+  font-size: 1.1rem;
+}
+
+/* ========== DOCS GRID ========== */
+.docsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.docsCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.docsCardIcon {
+  font-size: 3rem;
+  margin-bottom: var(--space-xs);
+}
+
+.docsCard h2 {
+  font-size: 1.4rem;
+}
+
+.docsCardDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+
+.docsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.docsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.docsCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-sunrise-dark), var(--color-sunrise));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .docsGrid {
+    grid-template-columns: 1fr;
+  }
+}

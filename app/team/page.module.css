@@ -1,0 +1,86 @@
+/* ========== PAGE HERO ========== */
+.pageHero {
+  position: relative;
+  padding: 160px 0 80px;
+  text-align: center;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.blob1 {
+  width: 400px;
+  height: 400px;
+  top: -120px;
+  right: -80px;
+}
+
+.blob2 {
+  width: 300px;
+  height: 300px;
+  bottom: -60px;
+  left: -100px;
+}
+
+.heroSub {
+  max-width: 560px;
+  margin: var(--space-md) auto 0;
+  font-size: 1.1rem;
+}
+
+/* ========== TEAM GRID ========== */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.teamCard {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.teamAvatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-cream), var(--color-sun-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  margin-bottom: var(--space-sm);
+  box-shadow: 0 4px 12px rgba(217, 108, 128, 0.15);
+}
+
+.teamCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.teamRole {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-sunrise-dark);
+  background: rgba(217, 108, 128, 0.1);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xs);
+}
+
+.teamCard p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
