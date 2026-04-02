@@ -123,6 +123,59 @@
   margin: var(--space-sm) auto var(--space-2xl);
 }
 
+/* ==================== PROMO ==================== */
+.promoSection {
+  padding: var(--space-xl) 0 var(--space-3xl);
+  position: relative;
+}
+
+.promoCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  background: linear-gradient(135deg, #FDF0F2, #FFF5E6);
+  text-align: center;
+  border: 1px solid rgba(217, 108, 128, 0.15);
+  box-shadow: 0 8px 32px rgba(217, 108, 128, 0.1);
+}
+
+.blobPromo1 {
+  width: 250px;
+  height: 250px;
+  top: -80px;
+  right: -60px;
+}
+
+.blobPromo2 {
+  width: 200px;
+  height: 200px;
+  bottom: -60px;
+  left: -40px;
+}
+
+.promoContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.promoContent h2 {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  background: linear-gradient(135deg, var(--color-sunrise-dark), var(--color-sunrise));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.promoContent p {
+  max-width: 520px;
+  font-size: 1.05rem;
+}
+
 /* ==================== ADVANTAGES ==================== */
 .advantages {
   position: relative;

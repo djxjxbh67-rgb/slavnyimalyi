@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import imgPlayroom from "../public/images/gallery/playroom.png";
 import teamData from "../data/team.json";
+import promoData from "../data/promo.json";
 
 export default function Home() {
   return (
@@ -53,6 +54,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ==================== PROMO ==================== */}
+      {promoData.enabled && (!promoData.expiresAt || new Date(promoData.expiresAt) >= new Date()) && (
+        <section className={styles.promoSection} id="promo">
+          <div className="container">
+            <div className={styles.promoCard}>
+              <div className={`blob blob-yellow ${styles.blobPromo1}`} />
+              <div className={`blob blob-orange ${styles.blobPromo2}`} />
+              <div className={styles.promoContent}>
+                <span className="badge animate-fade-in-up">{promoData.badge}</span>
+                <h2 className="animate-fade-in-up delay-1">
+                  {promoData.title}
+                </h2>
+                <p className="animate-fade-in-up delay-2">
+                  {promoData.text}
+                </p>
+                <a
+                  href={promoData.buttonLink}
+                  className="btn btn-primary animate-fade-in-up delay-3"
+                  id="promo-cta"
+                >
+                  {promoData.buttonText}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ==================== ADVANTAGES ==================== */}
       <section className={`section ${styles.advantages}`} id="advantages">

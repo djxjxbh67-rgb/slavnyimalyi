@@ -2,6 +2,7 @@ import { Nunito, Comfortaa } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PromoBanner from "@/components/PromoBanner";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -113,6 +114,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <PromoBanner />
         <Header />
         <main>{children}</main>
         <Footer />
