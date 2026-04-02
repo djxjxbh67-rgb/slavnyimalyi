@@ -216,6 +216,11 @@
   .navList {
     flex-direction: column;
     gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .hasDropdown {
+    text-align: center;
   }
 
   .navLink {
@@ -234,7 +239,7 @@
     box-shadow: none;
     border: none;
     background: transparent;
-    padding: 4px 0 0 16px;
+    padding: 4px 0 0 0;
     min-width: unset;
   }
 
