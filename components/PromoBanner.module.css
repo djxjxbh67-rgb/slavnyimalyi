@@ -55,3 +55,15 @@
   color: #fff;
   background: rgba(255, 255, 255, 0.15);
 }
+
+@media (max-width: 600px) {
+  .banner {
+    font-size: 0.78rem;
+    padding: 8px 40px 8px 12px;
+    line-height: 1.4;
+  }
+
+  .close {
+    right: 8px;
+  }
+}

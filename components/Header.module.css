@@ -196,7 +196,7 @@
   .nav {
     position: fixed;
     inset: 0;
-    background: rgba(253, 251, 245, 0.97);
+    background: rgb(253, 251, 245);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
