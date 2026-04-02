@@ -30,8 +30,8 @@
 /* ========== TEAM GRID ========== */
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
 }
 
 .teamCard {
@@ -44,42 +44,65 @@
 }
 
 .teamAvatar {
-  width: 96px;
-  height: 96px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-cream), var(--color-sun-light));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: var(--space-sm);
   box-shadow: 0 4px 12px rgba(217, 108, 128, 0.15);
 }
 
 .teamCard h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin-bottom: 0;
 }
 
 .teamRole {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--color-sunrise-dark);
   background: rgba(217, 108, 128, 0.1);
-  padding: 4px 14px;
+  padding: 3px 12px;
   border-radius: var(--radius-full);
   margin-bottom: var(--space-xs);
 }
 
-.teamCard p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 400px;
+.teamEdu {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.teamBirthday {
+  font-size: 0.84rem;
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+}
+
+.teamMotto {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--color-sunrise-dark);
+  line-height: 1.6;
+  margin-top: var(--space-sm);
+  padding: 0 var(--space-sm);
+  border-left: 3px solid var(--color-sunrise-light);
+  text-align: left;
 }
 
 /* ========== RESPONSIVE ========== */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
   .teamGrid {
     grid-template-columns: 1fr;
   }

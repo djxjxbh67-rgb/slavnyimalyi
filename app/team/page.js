@@ -9,28 +9,68 @@ export const metadata = {
 
 const team = [
   {
+    emoji: "👩‍💼",
+    name: "Юлия",
+    role: "Директор",
+    birthday: "15 июня",
+    education: "Детский психолог",
+    motto: "",
+  },
+  {
     emoji: "👩‍🏫",
-    name: "Анна Сергеевна",
-    role: "Старший воспитатель",
-    bio: "Педагогический стаж 12 лет. Специалист по раннему развитию и мягкой адаптации малышей. Находит подход к каждому ребёнку и помогает семьям пройти период адаптации максимально комфортно.",
+    name: "Светлана",
+    role: "Управляющая",
+    birthday: "16 августа",
+    education: "Высшее педагогическое образование. Лингвист, английский язык.",
+    motto: "Воспитываем будущее, создаём настоящее!",
   },
   {
     emoji: "👩‍🎨",
-    name: "Елена Викторовна",
+    name: "Елизавета",
     role: "Воспитатель старшей группы",
-    bio: "Высшее педагогическое образование. Увлекает детей творчеством и проектной деятельностью. Организует тематические недели, которые дети обожают.",
+    birthday: "",
+    education: "Педагог дошкольного образования, на данный момент проходит переподготовку на логопеда-дефектолога.",
+    motto: "",
   },
   {
-    emoji: "👨‍🔬",
-    name: "Мария Александровна",
-    role: "Логопед-дефектолог",
-    bio: "Работает с детьми от 2 лет. Проводит индивидуальные и групповые занятия по развитию речи. Помогает малышам заговорить чисто и уверенно.",
+    emoji: "👩‍🏫",
+    name: "Наталья",
+    role: "Воспитатель младшей группы",
+    birthday: "",
+    education: "Высшее педагогическое образование. Учитель начальных классов и воспитатель дошкольного учреждения.",
+    motto: "Дети — это не сосуды, которые нужно заполнить, а факелы, которые нужно зажечь.",
   },
   {
-    emoji: "👩‍🎤",
-    name: "Ольга Дмитриевна",
+    emoji: "🤝",
+    name: "Олеся",
+    role: "Помощник воспитателя",
+    birthday: "",
+    education: "Медицинский работник",
+    motto: "",
+  },
+  {
+    emoji: "👩‍🍳",
+    name: "Светлана",
+    role: "Повар",
+    birthday: "17 июня",
+    education: "Повар-кондитер",
+    motto: "",
+  },
+  {
+    emoji: "🗣️",
+    name: "Елена Геннадьевна",
+    role: "Логопед",
+    birthday: "",
+    education: "",
+    motto: "",
+  },
+  {
+    emoji: "🎵",
+    name: "Елена",
     role: "Музыкальный руководитель",
-    bio: "Проводит ритмику, музыкальные занятия и готовит праздничные утренники для всех групп. Дети с нетерпением ждут каждого её урока.",
+    birthday: "",
+    education: "",
+    motto: "",
   },
 ];
 
@@ -58,14 +98,24 @@ export default function TeamPage() {
             {team.map((member, i) => (
               <div
                 key={i}
-                className={`card animate-fade-in-up delay-${i + 1} ${styles.teamCard}`}
+                className={`card animate-fade-in-up delay-${(i % 4) + 1} ${styles.teamCard}`}
               >
                 <div className={styles.teamAvatar}>
                   <span>{member.emoji}</span>
                 </div>
                 <h3>{member.name}</h3>
                 <span className={styles.teamRole}>{member.role}</span>
-                <p>{member.bio}</p>
+                {member.education && (
+                  <p className={styles.teamEdu}>{member.education}</p>
+                )}
+                {member.birthday && (
+                  <p className={styles.teamBirthday}>🎂 {member.birthday}</p>
+                )}
+                {member.motto && (
+                  <blockquote className={styles.teamMotto}>
+                    «{member.motto}»
+                  </blockquote>
+                )}
               </div>
             ))}
           </div>
