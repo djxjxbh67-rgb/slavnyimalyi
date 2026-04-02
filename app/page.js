@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import imgPlayroom from "../public/images/gallery/playroom.png";
+import teamData from "../data/team.json";
 
 export default function Home() {
   return (
@@ -187,32 +188,7 @@ export default function Home() {
           </p>
 
           <div className={styles.teamGrid}>
-            {[
-              {
-                emoji: "👩‍💼",
-                name: "Юлия",
-                role: "Директор",
-                bio: "Детский психолог",
-              },
-              {
-                emoji: "👩‍🏫",
-                name: "Светлана",
-                role: "Управляющая",
-                bio: "Лингвист, английский язык. Высшее педагогическое образование.",
-              },
-              {
-                emoji: "👩‍🎨",
-                name: "Елизавета",
-                role: "Воспитатель старшей группы",
-                bio: "Педагог дошкольного образования, проходит переподготовку на логопеда-дефектолога.",
-              },
-              {
-                emoji: "👩‍🏫",
-                name: "Наталья",
-                role: "Воспитатель младшей группы",
-                bio: "Учитель начальных классов и воспитатель дошкольного учреждения.",
-              },
-            ].map((member, i) => (
+            {teamData.slice(0, 4).map((member, i) => (
               <div
                 key={i}
                 className={`card animate-fade-in-up delay-${i + 1} ${styles.teamCard}`}
@@ -222,7 +198,7 @@ export default function Home() {
                 </div>
                 <h3>{member.name}</h3>
                 <span className={styles.teamRole}>{member.role}</span>
-                <p>{member.bio}</p>
+                <p>{member.education}</p>
               </div>
             ))}
           </div>

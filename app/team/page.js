@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import teamData from "../../data/team.json";
 
 export const metadata = {
   title: "Наша команда",
@@ -6,73 +7,6 @@ export const metadata = {
     "Познакомьтесь с командой воспитателей и педагогов детского сада «Славный Малый» в Приморском районе СПб. Профессионалы с опытом и любовью к детям.",
   alternates: { canonical: "https://slavnyimalyi.spb.ru/team/" },
 };
-
-const team = [
-  {
-    emoji: "👩‍💼",
-    name: "Юлия",
-    role: "Директор",
-    birthday: "15 июня",
-    education: "Детский психолог",
-    motto: "",
-  },
-  {
-    emoji: "👩‍🏫",
-    name: "Светлана",
-    role: "Управляющая",
-    birthday: "16 августа",
-    education: "Высшее педагогическое образование. Лингвист, английский язык.",
-    motto: "Воспитываем будущее, создаём настоящее!",
-  },
-  {
-    emoji: "👩‍🎨",
-    name: "Елизавета",
-    role: "Воспитатель старшей группы",
-    birthday: "",
-    education: "Педагог дошкольного образования, на данный момент проходит переподготовку на логопеда-дефектолога.",
-    motto: "",
-  },
-  {
-    emoji: "👩‍🏫",
-    name: "Наталья",
-    role: "Воспитатель младшей группы",
-    birthday: "",
-    education: "Высшее педагогическое образование. Учитель начальных классов и воспитатель дошкольного учреждения.",
-    motto: "Дети — это не сосуды, которые нужно заполнить, а факелы, которые нужно зажечь.",
-  },
-  {
-    emoji: "🤝",
-    name: "Олеся",
-    role: "Помощник воспитателя",
-    birthday: "",
-    education: "Медицинский работник",
-    motto: "",
-  },
-  {
-    emoji: "👩‍🍳",
-    name: "Светлана",
-    role: "Повар",
-    birthday: "17 июня",
-    education: "Повар-кондитер",
-    motto: "",
-  },
-  {
-    emoji: "🗣️",
-    name: "Елена Геннадьевна",
-    role: "Логопед",
-    birthday: "",
-    education: "",
-    motto: "",
-  },
-  {
-    emoji: "🎵",
-    name: "Елена",
-    role: "Музыкальный руководитель",
-    birthday: "",
-    education: "",
-    motto: "",
-  },
-];
 
 export default function TeamPage() {
   return (
@@ -95,7 +29,7 @@ export default function TeamPage() {
       <section className="section" id="team-grid">
         <div className="container">
           <div className={styles.teamGrid}>
-            {team.map((member, i) => (
+            {teamData.map((member, i) => (
               <div
                 key={i}
                 className={`card animate-fade-in-up delay-${(i % 4) + 1} ${styles.teamCard}`}
