@@ -1,7 +1,7 @@
 /* ========================================================================
    DESIGN SYSTEM — «Славный Малый»
    Playful, premium kindergarten aesthetic.
-   Palette: warm sunset oranges + calming teals + soft creams
+   Palette: Citrus — warm pinks, deep rose, olive-lime, cream, golden yellow
    Typography: Nunito (friendly rounded) + Comfortaa (display headings)
    ======================================================================== */
 
@@ -46,39 +46,39 @@ ul, ol {
 
 /* ---------- Design Tokens ---------- */
 :root {
-  /* Primary Palette */
-  --color-sunrise: #FF7A3D;
-  --color-sunrise-light: #FF9F6F;
-  --color-sunrise-dark: #E05A1B;
+  /* Primary Palette — Citrus pink */
+  --color-sunrise: #D96C80;
+  --color-sunrise-light: #E394A2;
+  --color-sunrise-dark: #BF2A52;
 
-  /* Accent — calming teal */
-  --color-teal: #2ABFBF;
-  --color-teal-light: #5FD6D6;
-  --color-teal-dark: #1A9999;
+  /* Accent — olive / chartreuse */
+  --color-teal: #BFB74B;
+  --color-teal-light: #D1CB72;
+  --color-teal-dark: #9E9730;
 
-  /* Warm yellows */
-  --color-sun: #FFD166;
-  --color-sun-light: #FFE0A0;
+  /* Warm golden yellow */
+  --color-sun: #F2AE2E;
+  --color-sun-light: #F7CC74;
 
   /* Soft pinks / lavender for accents */
-  --color-lavender: #C3A6E0;
-  --color-rose: #F5A0B8;
+  --color-lavender: #E394A2;
+  --color-rose: #D96C80;
 
   /* Neutrals */
-  --color-cream: #FFF8F0;
-  --color-cream-alt: #FEF3E8;
-  --color-bg: #FFFDFB;
+  --color-cream: #F2E9CE;
+  --color-cream-alt: #F5EFDB;
+  --color-bg: #FDFBF5;
   --color-surface: #FFFFFF;
   --color-text: #2D2A32;
   --color-text-muted: #6B6575;
   --color-text-light: #9A92A5;
-  --color-border: #EDE5DC;
+  --color-border: #E8E0D0;
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(45, 42, 50, 0.06);
   --shadow-md: 0 4px 20px rgba(45, 42, 50, 0.08);
   --shadow-lg: 0 8px 40px rgba(45, 42, 50, 0.12);
-  --shadow-glow: 0 0 30px rgba(255, 122, 61, 0.15);
+  --shadow-glow: 0 0 30px rgba(217, 108, 128, 0.18);
 
   /* Radius */
   --radius-sm: 8px;
@@ -155,7 +155,7 @@ p {
 
 .text-center { text-align: center; }
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-sunrise), var(--color-teal));
+  background: linear-gradient(135deg, var(--color-sunrise-dark), var(--color-sunrise));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,14 +194,14 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-sunrise), var(--color-sunrise-light));
+  background: linear-gradient(135deg, var(--color-sunrise-dark), var(--color-sunrise));
   color: #fff;
-  box-shadow: 0 4px 16px rgba(255, 122, 61, 0.3);
+  box-shadow: 0 4px 16px rgba(191, 42, 82, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(255, 122, 61, 0.4);
+  box-shadow: 0 6px 24px rgba(191, 42, 82, 0.4);
 }
 
 .btn-secondary {
@@ -217,14 +217,14 @@ p {
 }
 
 .btn-teal {
-  background: linear-gradient(135deg, var(--color-teal), var(--color-teal-light));
+  background: linear-gradient(135deg, var(--color-teal-dark), var(--color-teal));
   color: #fff;
-  box-shadow: 0 4px 16px rgba(42, 191, 191, 0.3);
+  box-shadow: 0 4px 16px rgba(158, 151, 48, 0.3);
 }
 
 .btn-teal:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(42, 191, 191, 0.4);
+  box-shadow: 0 6px 24px rgba(158, 151, 48, 0.4);
 }
 
 /* ---------- Cards ---------- */

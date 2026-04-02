@@ -134,7 +134,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-teal), var(--color-teal-light));
+  background: linear-gradient(135deg, var(--color-sunrise-dark), var(--color-sunrise));
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;

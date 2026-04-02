@@ -176,6 +176,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ==================== TEAM ==================== */}
+      <section className={`section ${styles.teamSection}`} id="team">
+        <div className="container">
+          <h2 className="text-center animate-fade-in-up">
+            Наша <span className="text-gradient">команда</span>
+          </h2>
+          <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
+            Профессиональные и&nbsp;любящие педагоги — сердце нашего детского сада
+          </p>
+
+          <div className={styles.teamGrid}>
+            {[
+              {
+                emoji: "👩‍🏫",
+                name: "Анна Сергеевна",
+                role: "Старший воспитатель",
+                bio: "Педагогический стаж 12 лет. Специалист по раннему развитию и мягкой адаптации малышей.",
+              },
+              {
+                emoji: "👩‍🎨",
+                name: "Елена Викторовна",
+                role: "Воспитатель старшей группы",
+                bio: "Высшее педагогическое образование. Увлекает детей творчеством и проектной деятельностью.",
+              },
+              {
+                emoji: "👨‍🔬",
+                name: "Мария Александровна",
+                role: "Логопед-дефектолог",
+                bio: "Работает с детьми от 2 лет. Проводит индивидуальные и групповые занятия по развитию речи.",
+              },
+              {
+                emoji: "👩‍🎤",
+                name: "Ольга Дмитриевна",
+                role: "Музыкальный руководитель",
+                bio: "Проводит ритмику, музыкальные занятия и готовит праздничные утренники для всех групп.",
+              },
+            ].map((member, i) => (
+              <div
+                key={i}
+                className={`card animate-fade-in-up delay-${i + 1} ${styles.teamCard}`}
+              >
+                <div className={styles.teamAvatar}>
+                  <span>{member.emoji}</span>
+                </div>
+                <h3>{member.name}</h3>
+                <span className={styles.teamRole}>{member.role}</span>
+                <p>{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== DOCUMENTS ==================== */}
+      <section className={`section section-alt ${styles.docsSection}`} id="documents">
+        <div className="container">
+          <h2 className="text-center animate-fade-in-up">
+            Пакет <span className="text-gradient">документов</span>
+          </h2>
+          <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
+            Для поступления в&nbsp;наш детский сад вам необходимо собрать следующие документы
+          </p>
+
+          <div className={styles.docsGrid}>
+            <div className={`card animate-fade-in-up delay-2 ${styles.docsCard}`}>
+              <div className={styles.docsCardIcon}>📋</div>
+              <h3>Медицинские документы</h3>
+              <ul className={styles.docsList}>
+                <li>
+                  <span className={styles.docsCheck}>✓</span>
+                  Медицинская справка о&nbsp;состоянии здоровья ребёнка от&nbsp;педиатра
+                </li>
+                <li>
+                  <span className={styles.docsCheck}>✓</span>
+                  Результаты анализа на&nbsp;энтеробиоз, яйцеглист
+                </li>
+              </ul>
+            </div>
+
+            <div className={`card animate-fade-in-up delay-3 ${styles.docsCard}`}>
+              <div className={styles.docsCardIcon}>📄</div>
+              <h3>Копии документов</h3>
+              <ul className={styles.docsList}>
+                <li>
+                  <span className={styles.docsCheck}>✓</span>
+                  Копия свидетельства о&nbsp;рождении ребёнка
+                </li>
+                <li>
+                  <span className={styles.docsCheck}>✓</span>
+                  Копия прививочного сертификата
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ==================== CTA BANNER ==================== */}
       <section className={`section ${styles.ctaBanner}`} id="cta-banner">
         <div className="container">
