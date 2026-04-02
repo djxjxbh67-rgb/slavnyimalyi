@@ -12,11 +12,17 @@ export default function PromoBanner() {
     if (promoData.expiresAt && new Date(promoData.expiresAt) < new Date()) return;
     if (sessionStorage.getItem("promo-dismissed") === "1") return;
     setVisible(true);
+    document.documentElement.style.setProperty("--banner-height", "42px");
+
+    return () => {
+      document.documentElement.style.setProperty("--banner-height", "0px");
+    };
   }, []);
 
   const dismiss = () => {
     setVisible(false);
     sessionStorage.setItem("promo-dismissed", "1");
+    document.documentElement.style.setProperty("--banner-height", "0px");
   };
 
   if (!visible) return null;

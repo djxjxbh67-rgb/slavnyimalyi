@@ -17,6 +17,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  --banner-height: 0px;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: var(--banner-height);
 }
 
 img, picture, video, canvas, svg {
