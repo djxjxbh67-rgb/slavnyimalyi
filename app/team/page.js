@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 import teamData from "../../data/team.json";
 
@@ -35,7 +36,17 @@ export default function TeamPage() {
                 className={`card animate-fade-in-up delay-${(i % 4) + 1} ${styles.teamCard}`}
               >
                 <div className={styles.teamAvatar}>
-                  <span>{member.emoji}</span>
+                  {member.photo ? (
+                    <Image
+                      src={`/images/team/${member.photo}`}
+                      alt={member.name}
+                      width={88}
+                      height={88}
+                      className={styles.teamPhoto}
+                    />
+                  ) : (
+                    <span>{member.emoji}</span>
+                  )}
                 </div>
                 <h3>{member.name}</h3>
                 <span className={styles.teamRole}>{member.role}</span>

@@ -194,7 +194,17 @@ export default function Home() {
                 className={`card animate-fade-in-up delay-${i + 1} ${styles.teamCard}`}
               >
                 <div className={styles.teamAvatar}>
-                  <span>{member.emoji}</span>
+                  {member.photo ? (
+                    <Image
+                      src={`/images/team/${member.photo}`}
+                      alt={member.name}
+                      width={88}
+                      height={88}
+                      className={styles.teamPhoto}
+                    />
+                  ) : (
+                    <span>{member.emoji}</span>
+                  )}
                 </div>
                 <h3>{member.name}</h3>
                 <span className={styles.teamRole}>{member.role}</span>
