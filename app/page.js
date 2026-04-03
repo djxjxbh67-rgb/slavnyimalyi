@@ -131,35 +131,21 @@ export default function Home() {
           </p>
 
           <div className={styles.groupsGrid}>
-            {/* Младшая */}
-            <div className={`${styles.groupCard} animate-fade-in-up delay-2`}>
-              <div className={`${styles.groupCardTop} ${styles.groupYoung}`}>
-                <span className={styles.groupEmoji}>{content.groups.young.emoji}</span>
-                <span className={styles.groupAge}>{content.groups.young.age}</span>
+            {content.groups.items.map((group, i) => (
+              <div key={i} className={`${styles.groupCard} animate-fade-in-up delay-${i + 2}`}>
+                <div className={`${styles.groupCardTop} ${styles['group' + group.id.charAt(0).toUpperCase() + group.id.slice(1)]}`}>
+                  <span className={styles.groupEmoji}>{group.emoji}</span>
+                  <span className={styles.groupAge}>{group.age}</span>
+                </div>
+                <div className={styles.groupCardBody}>
+                  <h3>{group.title}</h3>
+                  <p>{group.desc}</p>
+                  <Link href={group.link} className={`btn ${i === 1 ? 'btn-secondary' : (i === 0 ? 'btn-teal' : 'btn-primary')}`} id={`group-${group.id}-cta`}>
+                    {group.cta}
+                  </Link>
+                </div>
               </div>
-              <div className={styles.groupCardBody}>
-                <h3>{content.groups.young.title}</h3>
-                <p>{content.groups.young.desc}</p>
-                <Link href="/groups/young/" className="btn btn-teal" id="group-young-cta">
-                  {content.groups.young.cta}
-                </Link>
-              </div>
-            </div>
-
-            {/* Старшая */}
-            <div className={`${styles.groupCard} animate-fade-in-up delay-3`}>
-              <div className={`${styles.groupCardTop} ${styles.groupSenior}`}>
-                <span className={styles.groupEmoji}>{content.groups.senior.emoji}</span>
-                <span className={styles.groupAge}>{content.groups.senior.age}</span>
-              </div>
-              <div className={styles.groupCardBody}>
-                <h3>{content.groups.senior.title}</h3>
-                <p>{content.groups.senior.desc}</p>
-                <Link href="/groups/senior/" className="btn btn-primary" id="group-senior-cta">
-                  {content.groups.senior.cta}
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -14,7 +14,15 @@ const navLinks = [
       { href: "/documents/", label: "Пакет документов" },
     ],
   },
-  { href: "/groups/", label: "Группы" },
+  {
+    href: "/groups/",
+    label: "Группы",
+    children: [
+      { href: "/groups/young/", label: "Младшая (1,7–3 года)" },
+      { href: "/groups/middle/", label: "Средняя (3–4,5 года)" },
+      { href: "/groups/senior/", label: "Старшая (5–7 лет)" },
+    ],
+  },
   { href: "/services/", label: "Услуги" },
   { href: "/pricing/", label: "Цены" },
   { href: "/contacts/", label: "Контакты" },

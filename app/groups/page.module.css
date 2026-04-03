@@ -52,6 +52,10 @@
   background: linear-gradient(135deg, #E0F7F7, #B8ECE0);
 }
 
+.headerMiddle {
+  background: linear-gradient(135deg, #FAD0C4, #FF9A9E);
+}
+
 .headerSenior {
   background: linear-gradient(135deg, #FFE8D6, #FFD1AA);
 }
