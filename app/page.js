@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import imgPlayroom from "../public/images/gallery/playroom.png";
-import teamData from "../data/team.json";
-import promoData from "../data/promo.json";
+import teamData from "../content/Команда.json";
+import promoData from "../content/Промо_акция.json";
+import content from "../content/Главная.json";
 
 export default function Home() {
   return (
@@ -19,17 +20,13 @@ export default function Home() {
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroContent}>
             <span className={`badge animate-fade-in-up`}>
-              🌟 Запишитесь на бесплатный пробный день
+              {content.hero.badge}
             </span>
-            <h1 className={`animate-fade-in-up delay-1`}>
-              Детский сад, <br />
-              в&nbsp;который хочется <span className="text-gradient">возвращаться</span>
+            <h1 className={`animate-fade-in-up delay-1`} style={{ whiteSpace: "pre-wrap" }}>
+              {content.hero.title_main}<span className="text-gradient">{content.hero.title_gradient}</span>
             </h1>
             <p className={`animate-fade-in-up delay-2 ${styles.heroDesc}`}>
-              «Славный Малый» — это частный детский сад и&nbsp;центр развития
-              в&nbsp;Приморском районе Санкт&#8209;Петербурга. Любовь,
-              безопасность и&nbsp;развитие для детей от&nbsp;1,5
-              до&nbsp;7&nbsp;лет.
+              {content.hero.subtitle}
             </p>
             <div className={`animate-fade-in-up delay-3 ${styles.heroCtas}`}>
               <a
@@ -37,10 +34,10 @@ export default function Home() {
                 className="btn btn-primary"
                 id="hero-cta-phone"
               >
-                Записаться на пробный день
+                {content.hero.cta_primary}
               </a>
               <Link href="/groups/" className="btn btn-secondary" id="hero-cta-groups">
-                Посмотреть группы
+                {content.hero.cta_secondary}
               </Link>
             </div>
           </div>
@@ -86,41 +83,14 @@ export default function Home() {
       <section className={`section ${styles.advantages}`} id="advantages">
         <div className="container">
           <h2 className="text-center animate-fade-in-up">
-            Почему выбирают <span className="text-gradient">нас</span>
+            {content.advantages.title_main} <span className="text-gradient">{content.advantages.title_gradient}</span>
           </h2>
           <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
-            Мы создали пространство, где каждый ребёнок чувствует себя в безопасности
-            и&nbsp;развивается с&nbsp;удовольствием
+            {content.advantages.subtitle}
           </p>
 
           <div className={styles.advantagesGrid}>
-            {[
-              {
-                icon: "🎨",
-                title: "Развивающая среда",
-                desc: "Современные пособия, игровые зоны и творческие мастерские для гармоничного развития.",
-              },
-              {
-                icon: "👨‍👩‍👧",
-                title: "Малые группы",
-                desc: "До 15 детей в группе — индивидуальный подход и внимание каждому ребёнку.",
-              },
-              {
-                icon: "🍎",
-                title: "Здоровое питание",
-                desc: "Сбалансированное 5-разовое питание из свежих продуктов с учётом аллергий.",
-              },
-              {
-                icon: "🎶",
-                title: "Музыка и спорт",
-                desc: "Музыкальные занятия, ритмика и физкультура — каждый день по расписанию.",
-              },
-              {
-                icon: "📍",
-                title: "Удобная локация",
-                desc: "Два филиала на ул. Парашютной, в пешей доступности от ЖК «Приморский квартал».",
-              },
-            ].map((item, i) => (
+            {content.advantages.items.map((item, i) => (
               <div
                 key={i}
                 className={`card animate-fade-in-up delay-${i + 1} ${styles.advantageCard}`}
@@ -154,27 +124,24 @@ export default function Home() {
       <section className={`section section-alt ${styles.groupsPreview}`} id="groups-preview">
         <div className="container">
           <h2 className="text-center animate-fade-in-up">
-            Наши <span className="text-gradient">группы</span>
+            {content.groups.title_main} <span className="text-gradient">{content.groups.title_gradient}</span>
           </h2>
           <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
-            Каждая группа адаптирована под возрастные потребности и&nbsp;особенности развития
+            {content.groups.subtitle}
           </p>
 
           <div className={styles.groupsGrid}>
             {/* Младшая */}
             <div className={`${styles.groupCard} animate-fade-in-up delay-2`}>
               <div className={`${styles.groupCardTop} ${styles.groupYoung}`}>
-                <span className={styles.groupEmoji}>🐣</span>
-                <span className={styles.groupAge}>1,5 – 3 года</span>
+                <span className={styles.groupEmoji}>{content.groups.young.emoji}</span>
+                <span className={styles.groupAge}>{content.groups.young.age}</span>
               </div>
               <div className={styles.groupCardBody}>
-                <h3>Младшая группа</h3>
-                <p>
-                  Мягкая адаптация к детскому саду, развитие речи, сенсорики
-                  и&nbsp;мелкой моторики в&nbsp;игровой форме.
-                </p>
+                <h3>{content.groups.young.title}</h3>
+                <p>{content.groups.young.desc}</p>
                 <Link href="/groups/young/" className="btn btn-teal" id="group-young-cta">
-                  Подробнее
+                  {content.groups.young.cta}
                 </Link>
               </div>
             </div>
@@ -182,17 +149,14 @@ export default function Home() {
             {/* Старшая */}
             <div className={`${styles.groupCard} animate-fade-in-up delay-3`}>
               <div className={`${styles.groupCardTop} ${styles.groupSenior}`}>
-                <span className={styles.groupEmoji}>🦁</span>
-                <span className={styles.groupAge}>3 – 7 лет</span>
+                <span className={styles.groupEmoji}>{content.groups.senior.emoji}</span>
+                <span className={styles.groupAge}>{content.groups.senior.age}</span>
               </div>
               <div className={styles.groupCardBody}>
-                <h3>Старшая группа</h3>
-                <p>
-                  Подготовка к&nbsp;школе, развитие логики, творчества
-                  и&nbsp;социальных навыков в&nbsp;дружном коллективе.
-                </p>
+                <h3>{content.groups.senior.title}</h3>
+                <p>{content.groups.senior.desc}</p>
                 <Link href="/groups/senior/" className="btn btn-primary" id="group-senior-cta">
-                  Подробнее
+                  {content.groups.senior.cta}
                 </Link>
               </div>
             </div>
@@ -204,10 +168,10 @@ export default function Home() {
       <section className={`section ${styles.teamSection}`} id="team">
         <div className="container">
           <h2 className="text-center animate-fade-in-up">
-            Наша <span className="text-gradient">команда</span>
+            {content.team.title_main} <span className="text-gradient">{content.team.title_gradient}</span>
           </h2>
           <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
-            Профессиональные и&nbsp;любящие педагоги — сердце нашего детского сада
+            {content.team.subtitle}
           </p>
 
           <div className={styles.teamGrid}>
@@ -247,76 +211,37 @@ export default function Home() {
       <section className={`section section-alt ${styles.docsSection}`} id="documents">
         <div className="container">
           <h2 className="text-center animate-fade-in-up">
-            Пакет <span className="text-gradient">документов</span>
+            {content.documents.title_main} <span className="text-gradient">{content.documents.title_gradient}</span>
           </h2>
           <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
-            Для поступления в&nbsp;наш детский сад вам необходимо собрать следующие документы
+            {content.documents.subtitle}
           </p>
-
-          <div className={styles.docsGrid}>
-            <div className={`card animate-fade-in-up delay-2 ${styles.docsCard}`}>
-              <div className={styles.docsCardIcon}>📋</div>
-              <h3>Медицинские документы</h3>
-              <ul className={styles.docsList}>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  Медицинская справка о&nbsp;состоянии здоровья ребёнка от&nbsp;педиатра
-                </li>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  Результаты анализа на&nbsp;энтеробиоз, яйцеглист
-                </li>
-              </ul>
-            </div>
-
-            <div className={`card animate-fade-in-up delay-3 ${styles.docsCard}`}>
-              <div className={styles.docsCardIcon}>📄</div>
-              <h3>Копии документов</h3>
-              <ul className={styles.docsList}>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  Копия свидетельства о&nbsp;рождении ребёнка
-                </li>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  Копия прививочного сертификата
-                </li>
-              </ul>
-            </div>
+          <div className="text-center animate-fade-in-up delay-2">
+            <Link href="/documents/" className="btn btn-primary" id="docs-cta">
+              {content.documents.cta}
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ==================== CTA BANNER ==================== */}
-      <section className={`section ${styles.ctaBanner}`} id="cta-banner">
+      {/* ==================== BOTTOM CTA ==================== */}
+      <section className={styles.ctaBottom} id="cta-bottom">
+        <div className={`blob blob-yellow ${styles.blobBottom}`} />
         <div className="container">
           <div className={styles.ctaCard}>
-            <div className={`blob blob-orange ${styles.blobCta1}`} />
-            <div className={`blob blob-teal ${styles.blobCta2}`} />
-            <div className={styles.ctaContent}>
+            <div className={styles.ctaCardContent}>
               <h2 className="animate-fade-in-up">
-                Приходите на <span className="text-gradient">бесплатный</span> пробный&nbsp;день!
+                {content.cta_bottom.title_main} <span className="text-gradient">{content.cta_bottom.title_gradient}</span>
               </h2>
               <p className="animate-fade-in-up delay-1">
-                Познакомьтесь с&nbsp;воспитателями, оцените группу и&nbsp;условия.
-                Ваш ребёнок проведёт целый день с&nbsp;нами бесплатно.
+                {content.cta_bottom.subtitle}
               </p>
-              <div className={`animate-fade-in-up delay-2 ${styles.ctaCtas}`}>
-                <a
-                  href="tel:+79500383731"
-                  className="btn btn-primary"
-                  id="cta-banner-call"
-                >
-                  Позвонить
-                </a>
-                <a
-                  href="mailto:info@slavnyimalyi.spb.ru"
-                  className="btn btn-secondary"
-                  id="cta-banner-email"
-                >
-                  Написать на почту
-                </a>
-              </div>
+              <a href="tel:+79500383731" className="btn btn-primary animate-fade-in-up delay-2" id="bottom-cta-phone">
+                {content.cta_bottom.cta}
+              </a>
+            </div>
+            <div className={`${styles.ctaCardVisual} animate-scale-in delay-2`}>
+              <div className={styles.ctaVisualBadge}>☀️</div>
             </div>
           </div>
         </div>
@@ -324,3 +249,4 @@ export default function Home() {
     </>
   );
 }
+

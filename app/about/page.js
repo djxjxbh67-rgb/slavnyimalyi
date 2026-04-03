@@ -5,6 +5,7 @@ import imgPlayroom from "../../public/images/gallery/playroom.png";
 import imgBedroom from "../../public/images/gallery/bedroom.png";
 import imgArts from "../../public/images/gallery/arts.png";
 import imgPlayground from "../../public/images/gallery/playground.png";
+import content from "../../content/О_нас.json";
 
 export const metadata = {
   title: "О нас",
@@ -21,13 +22,12 @@ export default function AboutPage() {
         <div className={`blob blob-teal ${styles.blob1}`} />
         <div className={`blob blob-lavender ${styles.blob2}`} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <span className="badge animate-fade-in-up">О нашем центре</span>
+          <span className="badge animate-fade-in-up">{content.hero.badge}</span>
           <h1 className="animate-fade-in-up delay-1">
-            Место, где дети <span className="text-gradient">счастливы</span>
+            {content.hero.title_main} <span className="text-gradient">{content.hero.title_gradient}</span>
           </h1>
           <p className={`animate-fade-in-up delay-2 ${styles.heroSub}`}>
-            Мы создали пространство, в&nbsp;котором каждый ребёнок раскрывает свой
-            потенциал через игру, творчество и&nbsp;дружбу.
+            {content.hero.subtitle}
           </p>
         </div>
       </section>
@@ -37,23 +37,15 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.twoCol}>
             <div className={styles.colText}>
-              <h2>Наша миссия</h2>
-              <p>
-                «Славный Малый» — это не&nbsp;просто детский сад. Это&nbsp;сообщество 
-                заботливых педагогов и&nbsp;семей, объединённых общей целью: дать 
-                каждому ребёнку лучший старт в&nbsp;жизни.
-              </p>
-              <p>
-                Мы верим, что в&nbsp;основе качественного образования лежат
-                безопасность, уважение к&nbsp;личности ребёнка и&nbsp;радость
-                от&nbsp;познания нового. Наши воспитатели не&nbsp;просто присматривают 
-                за&nbsp;детьми — они становятся наставниками и&nbsp;друзьями.
-              </p>
+              <h2>{content.mission.title}</h2>
+              {content.mission.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
             <div className={styles.colVisual}>
               <div className={styles.visualCard}>
-                <span className={styles.bigEmoji}>🌱</span>
-                <p className={styles.visualLabel}>Растём вместе</p>
+                <span className={styles.bigEmoji}>{content.mission.visual_emoji}</span>
+                <p className={styles.visualLabel}>{content.mission.visual_label}</p>
               </div>
             </div>
           </div>
@@ -63,34 +55,13 @@ export default function AboutPage() {
       {/* Values */}
       <section className="section section-alt" id="about-values">
         <div className="container">
-          <h2 className="text-center">Наши ценности</h2>
+          <h2 className="text-center">{content.values.title}</h2>
           <p className={`text-center ${styles.sectionSub}`}>
-            Принципы, на которых строится каждый день в «Славном Малом»
+            {content.values.subtitle}
           </p>
 
           <div className={styles.valuesGrid}>
-            {[
-              {
-                icon: "❤️",
-                title: "Любовь и забота",
-                desc: "Каждый ребёнок чувствует тепло и принятие. Мы создаём атмосферу, где дети не боятся ошибаться.",
-              },
-              {
-                icon: "🧩",
-                title: "Индивидуальный подход",
-                desc: "Малые группы позволяют нам учитывать особенности, интересы и темп развития каждого малыша.",
-              },
-              {
-                icon: "🔒",
-                title: "Безопасность",
-                desc: "Закрытая территория, видеонаблюдение, медицинский контроль и безопасные материалы.",
-              },
-              {
-                icon: "🌍",
-                title: "Открытость",
-                desc: "Мы всегда на связи с родителями. Прозрачная коммуникация и регулярные отчёты о развитии ребёнка.",
-              },
-            ].map((val, i) => (
+            {content.values.items.map((val, i) => (
               <div key={i} className={`card ${styles.valueCard}`}>
                 <span className={styles.valueIcon}>{val.icon}</span>
                 <h3>{val.title}</h3>
@@ -104,20 +75,13 @@ export default function AboutPage() {
       {/* Environment */}
       <section className="section" id="about-environment">
         <div className="container">
-          <h2 className="text-center">Наше пространство</h2>
+          <h2 className="text-center">{content.environment.title}</h2>
           <p className={`text-center ${styles.sectionSub}`}>
-            Два уютных филиала в&nbsp;жилых комплексах на&nbsp;ул.&nbsp;Парашютная
+            {content.environment.subtitle}
           </p>
 
           <div className={styles.featuresList}>
-            {[
-              "Светлые просторные комнаты с панорамными окнами",
-              "Оборудованные игровые зоны для разных возрастов",
-              "Зона для творчества: рисование, лепка, аппликация",
-              "Музыкальный зал для занятий и утренников",
-              "Спальные комнаты с индивидуальными кроватками",
-              "Современная кухня с 5-разовым сбалансированным питанием",
-            ].map((feature, i) => (
+            {content.environment.features.map((feature, i) => (
               <div key={i} className={styles.featureItem}>
                 <span className={styles.featureCheck}>✓</span>
                 <span>{feature}</span>

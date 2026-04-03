@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import content from "../../content/Документы.json";
 
 export const metadata = {
   title: "Пакет документов",
@@ -14,12 +15,12 @@ export default function DocumentsPage() {
         <div className={`blob blob-yellow ${styles.blob1}`} />
         <div className={`blob blob-orange ${styles.blob2}`} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <span className="badge animate-fade-in-up">📋 Документы</span>
+          <span className="badge animate-fade-in-up">{content.hero.badge}</span>
           <h1 className="animate-fade-in-up delay-1">
-            Пакет <span className="text-gradient">документов</span>
+            {content.hero.title_main} <span className="text-gradient">{content.hero.title_gradient}</span>
           </h1>
           <p className={`animate-fade-in-up delay-2 ${styles.heroSub}`}>
-            Для поступления в&nbsp;наш детский сад вам необходимо собрать следующие документы
+            {content.hero.subtitle}
           </p>
         </div>
       </section>
@@ -27,41 +28,21 @@ export default function DocumentsPage() {
       <section className="section" id="documents-list">
         <div className="container">
           <div className={styles.docsGrid}>
-            <div className={`card animate-fade-in-up delay-1 ${styles.docsCard}`}>
-              <div className={styles.docsCardIcon}>🏥</div>
-              <h2>Медицинские документы</h2>
-              <p className={styles.docsCardDesc}>
-                Оригиналы медицинских справок, необходимых для&nbsp;безопасного пребывания ребёнка в&nbsp;коллективе.
-              </p>
-              <ul className={styles.docsList}>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  <span>Медицинская справка о&nbsp;состоянии здоровья ребёнка от&nbsp;педиатра</span>
-                </li>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  <span>Результаты анализа на&nbsp;энтеробиоз, яйцеглист</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className={`card animate-fade-in-up delay-2 ${styles.docsCard}`}>
-              <div className={styles.docsCardIcon}>📄</div>
-              <h2>Копии документов</h2>
-              <p className={styles.docsCardDesc}>
-                Копии личных документов ребёнка для&nbsp;оформления договора.
-              </p>
-              <ul className={styles.docsList}>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  <span>Копия свидетельства о&nbsp;рождении ребёнка</span>
-                </li>
-                <li>
-                  <span className={styles.docsCheck}>✓</span>
-                  <span>Копия прививочного сертификата</span>
-                </li>
-              </ul>
-            </div>
+            {content.categories.map((cat, i) => (
+              <div key={i} className={`card animate-fade-in-up delay-${i + 1} ${styles.docsCard}`}>
+                <div className={styles.docsCardIcon}>{cat.icon}</div>
+                <h2>{cat.title}</h2>
+                <p className={styles.docsCardDesc}>{cat.description}</p>
+                <ul className={styles.docsList}>
+                  {cat.items.map((item, j) => (
+                    <li key={j}>
+                      <span className={styles.docsCheck}>✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import teamData from "../../data/team.json";
+import teamData from "../../content/Команда.json";
 
 export const metadata = {
   title: "Наша команда",

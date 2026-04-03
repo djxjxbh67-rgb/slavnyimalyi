@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./PromoBanner.module.css";
-import promoData from "../data/promo.json";
+import promoData from "../content/Промо_акция.json";
 
 export default function PromoBanner() {
   const [visible, setVisible] = useState(false);

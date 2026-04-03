@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import content from "../../content/Цены.json";
 
 export const metadata = {
   title: "Цены и тарифы",
@@ -14,13 +15,12 @@ export default function PricingPage() {
         <div className={`blob blob-sun ${styles.blob1}`} />
         <div className={`blob blob-lavender ${styles.blob2}`} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <span className="badge animate-fade-in-up">💰 Цены</span>
+          <span className="badge animate-fade-in-up">{content.hero.badge}</span>
           <h1 className="animate-fade-in-up delay-1">
-            Прозрачные <span className="text-gradient">тарифы</span>
+            {content.hero.title_main} <span className="text-gradient">{content.hero.title_gradient}</span>
           </h1>
           <p className={`animate-fade-in-up delay-2 ${styles.heroSub}`}>
-            Все включено: 5-разовое питание, развивающие занятия, прогулки
-            и&nbsp;творческие мастерские. Без скрытых доплат.
+            {content.hero.subtitle}
           </p>
         </div>
       </section>
@@ -28,96 +28,48 @@ export default function PricingPage() {
       <section className="section" id="pricing-plans">
         <div className="container">
           <div className={styles.plansGrid}>
-            {/* Полный день */}
-            <div className={`${styles.planCard} animate-fade-in-up`}>
-              <div className={styles.planHeader}>
-                <span className={styles.planEmoji}>☀️</span>
-                <h2>Полный день</h2>
-                <p className={styles.planTime}>8:00 – 20:00</p>
-              </div>
-              <div className={styles.planBody}>
-                <div className={styles.price}>
-                  <span className={styles.priceAmount}>45 000</span>
-                  <span className={styles.pricePer}>₽/мес</span>
+            {content.plans.map((plan, i) => (
+              <div 
+                key={plan.id} 
+                className={`${styles.planCard} ${plan.featured ? styles.featured : ''} animate-fade-in-up delay-${i}`}
+              >
+                {plan.featured && <div className={styles.featuredBadge}>{plan.featured_badge}</div>}
+                <div className={styles.planHeader}>
+                  <span className={styles.planEmoji}>{plan.emoji}</span>
+                  <h2>{plan.name}</h2>
+                  <p className={styles.planTime}>{plan.time}</p>
                 </div>
-                <ul className={styles.featureList}>
-                  <li className={styles.included}>5-разовое питание</li>
-                  <li className={styles.included}>Все развивающие занятия</li>
-                  <li className={styles.included}>Прогулки 2 раза в день</li>
-                  <li className={styles.included}>Творческие мастерские</li>
-                  <li className={styles.included}>Дневной сон</li>
-                  <li className={styles.included}>Фото- и видеоотчёты</li>
-                </ul>
-                <a
-                  href="tel:+79500383731"
-                  className="btn btn-primary"
-                >
-                  Записаться
-                </a>
-              </div>
-            </div>
-
-            {/* Полдня */}
-            <div className={`${styles.planCard} ${styles.featured} animate-fade-in-up delay-1`}>
-              <div className={styles.featuredBadge}>Популярный</div>
-              <div className={styles.planHeader}>
-                <span className={styles.planEmoji}>🌤️</span>
-                <h2>Полдня</h2>
-                <p className={styles.planTime}>8:00 – 13:00</p>
-              </div>
-              <div className={styles.planBody}>
-                <div className={styles.price}>
-                  <span className={styles.priceAmount}>30 000</span>
-                  <span className={styles.pricePer}>₽/мес</span>
+                <div className={styles.planBody}>
+                  <div className={styles.price}>
+                    <span className={styles.priceAmount}>{plan.price}</span>
+                    <span className={styles.pricePer}>{plan.unit}</span>
+                  </div>
+                  <ul className={styles.featureList}>
+                    {plan.features.map((feat, j) => (
+                      <li key={j} className={feat.included ? styles.included : styles.excluded}>
+                        {feat.text}
+                      </li>
+                    ))}
+                  </ul>
+                  <a href="tel:+79500383731" className="btn btn-primary">
+                    Записаться
+                  </a>
                 </div>
-                <ul className={styles.featureList}>
-                  <li className={styles.included}>3-разовое питание</li>
-                  <li className={styles.included}>Все утренние занятия</li>
-                  <li className={styles.included}>Прогулка</li>
-                  <li className={styles.included}>Творческие мастерские</li>
-                  <li className={styles.excluded}>Без дневного сна</li>
-                  <li className={styles.included}>Фото- и видеоотчёты</li>
-                </ul>
-                <a
-                  href="tel:+79500383731"
-                  className="btn btn-primary"
-                >
-                  Записаться
-                </a>
               </div>
-            </div>
-
-
+            ))}
           </div>
 
           {/* Additional info */}
           <div className={styles.infoBlock}>
-            <h2 className="text-center">Важная информация</h2>
+            <h2 className="text-center">{content.info.title}</h2>
             <div className={styles.infoGrid}>
-              <div className={`glass-card ${styles.infoCard}`}>
-                <span className={styles.infoIcon}>🎁</span>
-                <h3>Пробный день — бесплатно</h3>
-                <p>
-                  Приведите ребёнка на&nbsp;целый день совершенно бесплатно.
-                  Познакомьтесь с&nbsp;воспитателями и&nbsp;оцените условия.
-                </p>
-              </div>
-              <div className={`glass-card ${styles.infoCard}`}>
-                <span className={styles.infoIcon}>👨‍👩‍👧‍👦</span>
-                <h3>Скидка для второго ребёнка</h3>
-                <p>
-                  Если оба ребёнка посещают наш сад, второму предоставляется
-                  скидка 10% от&nbsp;стоимости тарифа.
-                </p>
-              </div>
-              <div className={`glass-card ${styles.infoCard}`}>
-                <span className={styles.infoIcon}>📋</span>
-                <h3>Перерасчёт за пропуски</h3>
-                <p>
-                  При отсутствии ребёнка по болезни более 5&nbsp;дней мы
-                  делаем перерасчёт питания за&nbsp;пропущенные дни.
-                </p>
-              </div>
+              {content.info.items.map((item, i) => (
+                <div key={i} className={`glass-card ${styles.infoCard}`}>
+                  <span className={styles.infoIcon}>{item.icon}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
