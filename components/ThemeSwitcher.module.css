@@ -38,6 +38,8 @@
   flex-direction: column;
   gap: 6px;
   min-width: 220px;
+  max-height: 420px;
+  overflow-y: auto;
   animation: fadeUp 0.2s ease-out;
 }
 

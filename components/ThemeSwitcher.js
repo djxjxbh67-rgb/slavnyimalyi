@@ -45,6 +45,63 @@ const themes = {
       "--color-bg": "#FFFCF5",
       "--color-border": "#E8DCC8",
     }
+  },
+  bird: {
+    label: "🐦 Exotic Bird",
+    vars: {
+      "--color-sunrise": "#E6266E",
+      "--color-sunrise-light": "#B84870",
+      "--color-sunrise-dark": "#C01A58",
+      "--color-teal": "#0E7E7E",
+      "--color-teal-light": "#3CA5A5",
+      "--color-teal-dark": "#0C3542",
+      "--color-sun": "#B5B84A",
+      "--color-sun-light": "#CDD06A",
+      "--color-lavender": "#B84870",
+      "--color-rose": "#E6266E",
+      "--color-cream": "#E0ECE4",
+      "--color-cream-alt": "#EDF3EE",
+      "--color-bg": "#F5FAF6",
+      "--color-border": "#C0D5C8",
+    }
+  },
+  neon: {
+    label: "⚡ Neon Tropical",
+    vars: {
+      "--color-sunrise": "#F62D93",
+      "--color-sunrise-light": "#F86BB3",
+      "--color-sunrise-dark": "#D41A7A",
+      "--color-teal": "#44BDBD",
+      "--color-teal-light": "#72D2D2",
+      "--color-teal-dark": "#41631E",
+      "--color-sun": "#C9E51A",
+      "--color-sun-light": "#D9EE5C",
+      "--color-lavender": "#F86BB3",
+      "--color-rose": "#F62D93",
+      "--color-cream": "#EEFACC",
+      "--color-cream-alt": "#F5FCDF",
+      "--color-bg": "#FAFDE8",
+      "--color-border": "#D8E8A0",
+    }
+  },
+  lavender: {
+    label: "💜 Lavender Garden",
+    vars: {
+      "--color-sunrise": "#A88AED",
+      "--color-sunrise-light": "#C4B0F5",
+      "--color-sunrise-dark": "#7E5CC8",
+      "--color-teal": "#CBD83B",
+      "--color-teal-light": "#DBE56A",
+      "--color-teal-dark": "#9AAD1E",
+      "--color-sun": "#CBD83B",
+      "--color-sun-light": "#E0E978",
+      "--color-lavender": "#C4B0F5",
+      "--color-rose": "#A88AED",
+      "--color-cream": "#FFFEEC",
+      "--color-cream-alt": "#FFFFF4",
+      "--color-bg": "#FFFFF8",
+      "--color-border": "#E6E4D0",
+    }
   }
 };
 
