@@ -57,7 +57,6 @@ export default function Footer() {
               <li>ул.&nbsp;Парашютная&nbsp;23/1</li>
               <li>ул.&nbsp;Парашютная&nbsp;23/2</li>
               <li>Пн‑Пт: 8:00 – 20:00</li>
-              <li>Сб: 9:00 – 18:00</li>
             </ul>
           </div>
 

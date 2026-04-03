@@ -87,34 +87,7 @@ export default function PricingPage() {
               </div>
             </div>
 
-            {/* Суббота */}
-            <div className={`${styles.planCard} animate-fade-in-up delay-2`}>
-              <div className={styles.planHeader}>
-                <span className={styles.planEmoji}>🌈</span>
-                <h2>Рабочая суббота</h2>
-                <p className={styles.planTime}>9:00 – 18:00</p>
-              </div>
-              <div className={styles.planBody}>
-                <div className={styles.price}>
-                  <span className={styles.priceAmount}>3 000</span>
-                  <span className={styles.pricePer}>₽/день</span>
-                </div>
-                <ul className={styles.featureList}>
-                  <li className={styles.included}>3-разовое питание</li>
-                  <li className={styles.included}>Развлекательная программа</li>
-                  <li className={styles.included}>Прогулка</li>
-                  <li className={styles.included}>Творческие занятия</li>
-                  <li className={styles.included}>Дневной отдых</li>
-                  <li className={styles.included}>Для всех возрастов</li>
-                </ul>
-                <a
-                  href="tel:+79500383731"
-                  className="btn btn-teal"
-                >
-                  Записаться
-                </a>
-              </div>
-            </div>
+
           </div>
 
           {/* Additional info */}
