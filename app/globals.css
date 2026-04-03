@@ -48,33 +48,33 @@ ul, ol {
 
 /* ---------- Design Tokens ---------- */
 :root {
-  /* Primary Palette — Citrus pink */
-  --color-sunrise: #D96C80;
-  --color-sunrise-light: #E394A2;
-  --color-sunrise-dark: #BF2A52;
+  /* Primary Palette — Lavender */
+  --color-sunrise: #A88AED;
+  --color-sunrise-light: #C4B0F5;
+  --color-sunrise-dark: #7E5CC8;
 
-  /* Accent — olive / chartreuse */
-  --color-teal: #BFB74B;
-  --color-teal-light: #D1CB72;
-  --color-teal-dark: #9E9730;
+  /* Accent — Lime/Chartreuse */
+  --color-teal: #CBD83B;
+  --color-teal-light: #DBE56A;
+  --color-teal-dark: #9AAD1E;
 
   /* Warm golden yellow */
-  --color-sun: #F2AE2E;
-  --color-sun-light: #F7CC74;
+  --color-sun: #CBD83B;
+  --color-sun-light: #E0E978;
 
   /* Soft pinks / lavender for accents */
-  --color-lavender: #E394A2;
-  --color-rose: #D96C80;
+  --color-lavender: #C4B0F5;
+  --color-rose: #A88AED;
 
   /* Neutrals */
-  --color-cream: #F2E9CE;
-  --color-cream-alt: #F5EFDB;
-  --color-bg: #FDFBF5;
+  --color-cream: #FFFEEC;
+  --color-cream-alt: #FFFFF4;
+  --color-bg: #FFFFF8;
   --color-surface: #FFFFFF;
   --color-text: #2D2A32;
   --color-text-muted: #6B6575;
   --color-text-light: #9A92A5;
-  --color-border: #E8E0D0;
+  --color-border: #E6E4D0;
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(45, 42, 50, 0.06);

@@ -5,8 +5,23 @@ import styles from "./ThemeSwitcher.module.css";
 
 const themes = {
   citrus: {
-    label: "🍋 Citrus (текущая)",
-    vars: {} // default — nothing to override
+    label: "🍋 Citrus",
+    vars: {
+      "--color-sunrise": "#D96C80",
+      "--color-sunrise-light": "#E394A2",
+      "--color-sunrise-dark": "#BF2A52",
+      "--color-teal": "#BFB74B",
+      "--color-teal-light": "#D1CB72",
+      "--color-teal-dark": "#9E9730",
+      "--color-sun": "#F2AE2E",
+      "--color-sun-light": "#F7CC74",
+      "--color-lavender": "#E394A2",
+      "--color-rose": "#D96C80",
+      "--color-cream": "#F2E9CE",
+      "--color-cream-alt": "#F5EFDB",
+      "--color-bg": "#FDFBF5",
+      "--color-border": "#E8E0D0"
+    }
   },
   matcha: {
     label: "🍵 Miss Matcha",
@@ -85,23 +100,8 @@ const themes = {
     }
   },
   lavender: {
-    label: "💜 Lavender Garden",
-    vars: {
-      "--color-sunrise": "#A88AED",
-      "--color-sunrise-light": "#C4B0F5",
-      "--color-sunrise-dark": "#7E5CC8",
-      "--color-teal": "#CBD83B",
-      "--color-teal-light": "#DBE56A",
-      "--color-teal-dark": "#9AAD1E",
-      "--color-sun": "#CBD83B",
-      "--color-sun-light": "#E0E978",
-      "--color-lavender": "#C4B0F5",
-      "--color-rose": "#A88AED",
-      "--color-cream": "#FFFEEC",
-      "--color-cream-alt": "#FFFFF4",
-      "--color-bg": "#FFFFF8",
-      "--color-border": "#E6E4D0",
-    }
+    label: "💜 Lavender Garden (текущая)",
+    vars: {} // default — nothing to override
   }
 };
 
@@ -143,7 +143,7 @@ function applyTheme(name) {
 
 export default function ThemeSwitcher() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("citrus");
+  const [active, setActive] = useState("lavender");
 
   useEffect(() => {
     // check URL ?theme=xxx
@@ -160,7 +160,7 @@ export default function ThemeSwitcher() {
     applyTheme(name);
     // update URL without reload
     const url = new URL(window.location);
-    if (name === "citrus") {
+    if (name === "lavender") {
       url.searchParams.delete("theme");
     } else {
       url.searchParams.set("theme", name);
