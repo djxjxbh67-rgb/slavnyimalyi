@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PromoBanner from "@/components/PromoBanner";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -118,6 +119,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <ThemeSwitcher />
       </body>
     </html>
   );
