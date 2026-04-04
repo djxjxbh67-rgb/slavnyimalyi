@@ -10,21 +10,21 @@
       "icon": "📞",
       "title": "Телефон",
       "link": "tel:+79500383731",
-      "link_text": "+7 (950) 038-37-31",
+      "link_text": "+7 950 038-37-31",
       "note": "Звоните с 8:00 до 20:00"
     },
     {
       "icon": "✉️",
       "title": "Электронная почта",
-      "link": "mailto:info@slavnyimalyi.spb.ru",
-      "link_text": "info@slavnyimalyi.spb.ru",
+      "link": "mailto:slavnyimalyispb@gmail.com",
+      "link_text": "slavnyimalyispb@gmail.com",
       "note": "Ответим в течение рабочего дня"
     },
     {
       "icon": "💬",
-      "title": "Мессенджер Max",
-      "link": "https://max.ru/",
-      "link_text": "Написать в Max",
+      "title": "WhatsApp",
+      "link": "https://wa.me/79500383731",
+      "link_text": "Написать в WhatsApp",
       "note": "Быстрый способ связи"
     },
     {

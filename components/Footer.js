@@ -49,10 +49,10 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Контакты</h4>
             <ul>
               <li>
-                <a href="tel:+79500383731">+7 (950) 038-37-31</a>
+                <a href="tel:+79500383731">+7 950 038-37-31</a>
               </li>
               <li>
-                <a href="mailto:info@slavnyimalyi.spb.ru">info@slavnyimalyi.spb.ru</a>
+                <a href="mailto:slavnyimalyispb@gmail.com">slavnyimalyispb@gmail.com</a>
               </li>
               <li>ул.&nbsp;Парашютная&nbsp;23/1</li>
               <li>ул.&nbsp;Парашютная&nbsp;23/2</li>

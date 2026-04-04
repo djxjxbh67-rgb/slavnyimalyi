@@ -101,7 +101,7 @@ export default function ServicesPage() {
             <a href="tel:+79500383731" className="btn btn-primary animate-fade-in-up delay-2">
               {content.cta.phone_text}
             </a>
-            <a href="mailto:info@slavnyimalyi.spb.ru" className="btn btn-secondary animate-fade-in-up delay-3">
+            <a href="mailto:slavnyimalyispb@gmail.com" className="btn btn-secondary animate-fade-in-up delay-3">
               {content.cta.email_text}
             </a>
           </div>
