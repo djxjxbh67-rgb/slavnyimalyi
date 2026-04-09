@@ -30,7 +30,7 @@ export default function TeamPage() {
       <section className="section" id="team-grid">
         <div className="container">
           <div className={styles.teamGrid}>
-            {teamData.map((member, i) => (
+            {teamData.members.map((member, i) => (
               <div
                 key={i}
                 className={`card animate-fade-in-up delay-${(i % 4) + 1} ${styles.teamCard}`}

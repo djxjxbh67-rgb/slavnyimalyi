@@ -161,7 +161,7 @@ export default function Home() {
           </p>
 
           <div className={styles.teamGrid}>
-            {teamData.slice(0, 4).map((member, i) => (
+            {teamData.members.slice(0, 4).map((member, i) => (
               <div
                 key={i}
                 className={`card animate-fade-in-up delay-${i + 1} ${styles.teamCard}`}
