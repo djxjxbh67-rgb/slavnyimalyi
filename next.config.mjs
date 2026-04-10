@@ -1,12 +1,4 @@
-/** @type {import('next').NextConfig} */
-const isGithubPages = process.env.DEPLOY_TARGET === 'gh-pages';
-const repoName = 'slavnyimalyi';
-
 const nextConfig = {
-  // output: 'export', // Removed for better Vercel compatibility
-  trailingSlash: false,
-  basePath: isGithubPages ? `/${repoName}` : '',
-  assetPrefix: isGithubPages ? `/${repoName}/` : '',
   images: {
     unoptimized: true,
   },
