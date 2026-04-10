@@ -10,17 +10,35 @@
       "id": "full",
       "emoji": "☀️",
       "name": "Полный день",
-      "time": "8:00 – 20:00",
-      "price": "45 000",
+      "time": "8:00 – 19:00",
+      "price": "35 000",
       "unit": "₽/мес",
       "featured": false,
       "features": [
-        { "text": "5-разовое питание", "included": true },
-        { "text": "Все развивающие занятия", "included": true },
-        { "text": "Прогулки 2 раза в день", "included": true },
-        { "text": "Творческие мастерские", "included": true },
-        { "text": "Дневной сон", "included": true },
-        { "text": "Фото- и видеоотчёты", "included": true }
+        {
+          "text": "5-разовое питание",
+          "included": true
+        },
+        {
+          "text": "Все развивающие занятия",
+          "included": true
+        },
+        {
+          "text": "Прогулки 2 раза в день",
+          "included": true
+        },
+        {
+          "text": "Творчество",
+          "included": true
+        },
+        {
+          "text": "Дневной сон",
+          "included": true
+        },
+        {
+          "text": "Фото- и видеоотчёты",
+          "included": true
+        }
       ]
     },
     {
@@ -33,12 +51,30 @@
       "featured": true,
       "featured_badge": "Популярный",
       "features": [
-        { "text": "3-разовое питание", "included": true },
-        { "text": "Все утренние занятия", "included": true },
-        { "text": "Прогулка", "included": true },
-        { "text": "Творческие мастерские", "included": true },
-        { "text": "Без дневного сна", "included": false },
-        { "text": "Фото- и видеоотчёты", "included": true }
+        {
+          "text": "3-разовое питание",
+          "included": true
+        },
+        {
+          "text": "Все утренние занятия",
+          "included": true
+        },
+        {
+          "text": "Прогулка",
+          "included": true
+        },
+        {
+          "text": "Творческие мастерские",
+          "included": true
+        },
+        {
+          "text": "Без дневного сна",
+          "included": false
+        },
+        {
+          "text": "Фото- и видеоотчёты",
+          "included": true
+        }
       ]
     }
   ],
