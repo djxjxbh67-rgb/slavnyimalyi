@@ -4,7 +4,7 @@ const repoName = 'slavnyimalyi';
 
 const nextConfig = {
   // output: 'export', // Removed for better Vercel compatibility
-  trailingSlash: true,
+  trailingSlash: false,
   basePath: isGithubPages ? `/${repoName}` : '',
   assetPrefix: isGithubPages ? `/${repoName}/` : '',
   images: {
