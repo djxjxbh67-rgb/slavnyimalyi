@@ -3,7 +3,7 @@ const isGithubPages = process.env.DEPLOY_TARGET === 'gh-pages';
 const repoName = 'slavnyimalyi';
 
 const nextConfig = {
-  output: 'export',
+  // output: 'export', // Removed for better Vercel compatibility
   trailingSlash: true,
   basePath: isGithubPages ? `/${repoName}` : '',
   assetPrefix: isGithubPages ? `/${repoName}/` : '',

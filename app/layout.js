@@ -18,7 +18,7 @@ const comfortaa = Comfortaa({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://slavnyimalyi.spb.ru"),
+  metadataBase: new URL("https://slavniymaliy.ru"),
   title: {
     default: "Славный Малый — частный детский сад в Приморском районе СПб",
     template: "%s | Славный Малый",
@@ -37,7 +37,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    url: "https://slavnyimalyi.spb.ru",
+    url: "https://slavniymaliy.ru",
     siteName: "Славный Малый",
     title: "Славный Малый — частный детский сад в Приморском районе СПб",
     description:
@@ -48,7 +48,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://slavnyimalyi.spb.ru",
+    canonical: "https://slavniymaliy.ru",
   },
 };
 
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
               name: "Славный Малый",
               description:
                 "Частный детский сад и центр развития в Приморском районе СПб",
-              url: "https://slavnyimalyi.spb.ru",
+              url: "https://slavniymaliy.ru",
               telephone: "+79500383731",
               address: [
                 {
