@@ -34,6 +34,8 @@ jobs:
         run: |
           npm run build
           rm -rf out/admin/.gitignore || true
+          touch out/.nojekyll
+          echo "slavniymaliy.ru" > out/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
