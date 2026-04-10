@@ -1,0 +1,223 @@
+fragment HomeParts on Home {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+    cta_primary
+    cta_secondary
+  }
+  advantages {
+    __typename
+    title_main
+    title_gradient
+    subtitle
+    items {
+      __typename
+      icon
+      title
+      desc
+    }
+  }
+}
+
+fragment PricesParts on Prices {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+  }
+  plans {
+    __typename
+    id
+    emoji
+    name
+    time
+    price
+    unit
+    featured
+    featured_badge
+    features {
+      __typename
+      text
+      included
+    }
+  }
+  info {
+    __typename
+    title
+    items {
+      __typename
+      icon
+      title
+      desc
+    }
+  }
+}
+
+fragment ContactsParts on Contacts {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+  }
+  contacts {
+    __typename
+    icon
+    title
+    link
+    link_text
+    note
+    multiline_text
+  }
+  map {
+    __typename
+    url
+    caption
+  }
+}
+
+fragment AboutParts on About {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+  }
+  mission {
+    __typename
+    title
+    paragraphs
+    visual_label
+    visual_emoji
+  }
+  values {
+    __typename
+    title
+    subtitle
+    items {
+      __typename
+      icon
+      title
+      desc
+    }
+  }
+  environment {
+    __typename
+    title
+    subtitle
+    features
+  }
+}
+
+fragment ServicesParts on Services {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+  }
+  services {
+    __typename
+    id
+    emoji
+    title
+    description
+    features_title
+    features
+    pricing_title
+    prices {
+      __typename
+      name
+      value
+    }
+  }
+  cta {
+    __typename
+    title_main
+    title_gradient
+    subtitle
+    phone_text
+    email_text
+  }
+}
+
+fragment GroupsParts on Groups {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+  }
+  items {
+    __typename
+    id
+    emoji
+    age
+    title
+    desc
+    features_title
+    features
+    cta
+    link
+  }
+}
+
+fragment DocumentsParts on Documents {
+  __typename
+  hero {
+    __typename
+    badge
+    title_main
+    title_gradient
+    subtitle
+  }
+  categories {
+    __typename
+    icon
+    title
+    description
+    items
+  }
+}
+
+fragment TeamParts on Team {
+  __typename
+  members {
+    __typename
+    name
+    role
+    emoji
+    photo
+    birthday
+    education
+    motto
+  }
+}
+
+fragment PromoParts on Promo {
+  __typename
+  enabled
+  badge
+  title
+  text
+  bannerText
+  buttonText
+  buttonLink
+  color
+  expiresAt
+}

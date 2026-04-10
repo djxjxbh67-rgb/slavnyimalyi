@@ -18,14 +18,10 @@
 out/
 build/
 
-# TinaCMS
-node_modules/@tinacms/cli
-tina/__generated__
-public/admin/index.html
-public/admin/*.js
-public/admin/*.css
-public/admin/*.js.map
-public/admin/manifest.json
+# tina
+.tina-cache
+!public/admin/
+!tina/__generated__/
 
 # production
 /build
