@@ -100,6 +100,24 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.creatorLink {
+  color: var(--color-sunrise-light);
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+  display: inline-block;
+}
+
+.creatorLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .policyLink {
   transition: color var(--transition-fast);
 }

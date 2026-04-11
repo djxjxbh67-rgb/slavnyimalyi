@@ -77,7 +77,17 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} Славный Малый. Все права защищены.</p>
+          <div className={styles.copy}>
+            <p>&copy; {new Date().getFullYear()} Славный Малый. Все права защищены.</p>
+            <a 
+              href="https://t.me/sergkane" 
+              className={styles.creatorLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Сделано с любовью @sergkane
+            </a>
+          </div>
           <Link href="/politics/" className={styles.policyLink}>
             Политика конфиденциальности
           </Link>
