@@ -70,6 +70,7 @@ ul, ol {
   --color-cream: #FFFEEC;
   --color-cream-alt: #FFFFF4;
   --color-bg: #FFFFF8;
+  --color-bg-rgb: 255, 255, 248;
   --color-surface: #FFFFFF;
   --color-text: #2D2A32;
   --color-text-muted: #6B6575;

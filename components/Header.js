@@ -48,7 +48,7 @@ export default function Header() {
 
   return (
     <header
-      className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${isMobileOpen ? styles.menuOpen : ""}`}
       id="site-header"
     >
       <div className={`container ${styles.inner}`}>
