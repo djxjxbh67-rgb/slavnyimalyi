@@ -7,41 +7,6 @@
   },
   "plans": [
     {
-      "id": "full",
-      "emoji": "☀️",
-      "name": "Полный день",
-      "time": "8:00 – 19:00",
-      "price": "35 000",
-      "unit": "₽/мес",
-      "featured": false,
-      "features": [
-        {
-          "text": "5-разовое питание",
-          "included": true
-        },
-        {
-          "text": "Все развивающие занятия",
-          "included": true
-        },
-        {
-          "text": "Прогулки 2 раза в день",
-          "included": true
-        },
-        {
-          "text": "Творчество",
-          "included": true
-        },
-        {
-          "text": "Дневной сон",
-          "included": true
-        },
-        {
-          "text": "Фото- и видеоотчёты",
-          "included": true
-        }
-      ]
-    },
-    {
       "id": "half",
       "emoji": "🌤️",
       "name": "Полдня",
@@ -78,17 +43,52 @@
       ]
     },
     {
-      "id": "Flexible ",
-      "name": "12 посещений ",
-      "time": "08:00-19:00",
-      "price": "22 000",
-      "unit": "₽/мес"
+      "id": "full",
+      "emoji": "☀️",
+      "name": "Полный день",
+      "time": "8:00 – 19:00",
+      "price": "35 000",
+      "unit": "₽/мес",
+      "featured": false,
+      "features": [
+        {
+          "text": "5-разовое питание",
+          "included": true
+        },
+        {
+          "text": "Все развивающие занятия",
+          "included": true
+        },
+        {
+          "text": "Прогулки 2 раза в день",
+          "included": true
+        },
+        {
+          "text": "Творчество",
+          "included": true
+        },
+        {
+          "text": "Дневной сон",
+          "included": true
+        },
+        {
+          "text": "Фото- и видеоотчёты",
+          "included": true
+        }
+      ]
     },
     {
       "id": "Flexible 10",
       "name": "10 посещений ",
       "time": "08:00-19:00",
       "price": "19 000",
+      "unit": "₽/мес"
+    },
+    {
+      "id": "Flexible ",
+      "name": "12 посещений ",
+      "time": "08:00-19:00",
+      "price": "22 000",
       "unit": "₽/мес"
     }
   ],
