@@ -80,12 +80,12 @@ export default function Footer() {
           <div className={styles.copy}>
             <p>&copy; {new Date().getFullYear()} Славный Малый. Все права защищены.</p>
             <a 
-              href="https://t.me/sergkane" 
+              href="https://rocket-landing.ru/" 
               className={styles.creatorLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Сделано с любовью @sergkane
+              Сделано в Rocket Landing
             </a>
           </div>
           <Link href="/politics/" className={styles.policyLink}>
