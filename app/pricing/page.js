@@ -28,7 +28,7 @@ export default function PricingPage() {
       <section className="section" id="pricing-plans">
         <div className="container">
           <div className={styles.plansGrid}>
-            {content.plans.map((plan, i) => (
+            {content.plans?.map((plan, i) => (
               <div 
                 key={plan.id} 
                 className={`${styles.planCard} ${plan.featured ? styles.featured : ''} animate-fade-in-up delay-${i}`}
@@ -45,7 +45,7 @@ export default function PricingPage() {
                     <span className={styles.pricePer}>{plan.unit}</span>
                   </div>
                   <ul className={styles.featureList}>
-                    {plan.features.map((feat, j) => (
+                    {plan.features?.map((feat, j) => (
                       <li key={j} className={feat.included ? styles.included : styles.excluded}>
                         {feat.text}
                       </li>
@@ -63,7 +63,7 @@ export default function PricingPage() {
           <div className={styles.infoBlock}>
             <h2 className="text-center">{content.info.title}</h2>
             <div className={styles.infoGrid}>
-              {content.info.items.map((item, i) => (
+              {content.info.items?.map((item, i) => (
                 <div key={i} className={`glass-card ${styles.infoCard}`}>
                   <span className={styles.infoIcon}>{item.icon}</span>
                   <h3>{item.title}</h3>
