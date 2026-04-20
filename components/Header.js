@@ -31,12 +31,33 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 40);
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (isVisible || isMobileOpen) {
+      document.documentElement.style.setProperty("--nav-transform", "0px");
+    } else {
+      document.documentElement.style.setProperty("--nav-transform", "-150px");
+    }
+  }, [isVisible, isMobileOpen]);
 
   useEffect(() => {
     if (isMobileOpen) {
@@ -48,7 +69,9 @@ export default function Header() {
 
   return (
     <header
-      className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${isMobileOpen ? styles.menuOpen : ""}`}
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${
+        isMobileOpen ? styles.menuOpen : ""
+      } ${!isVisible && !isMobileOpen ? styles.hidden : ""}`}
       id="site-header"
     >
       <div className={`container ${styles.inner}`}>

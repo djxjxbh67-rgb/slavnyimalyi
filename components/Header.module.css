@@ -5,8 +5,9 @@
   right: 0;
   z-index: 1000;
   padding: 16px 0;
-  transition: all var(--transition-normal);
+  transition: all var(--transition-normal), transform 0.4s var(--ease-out);
   background: transparent;
+  transform: translateY(var(--nav-transform, 0px));
 }
 
 .header.scrolled,
