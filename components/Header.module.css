@@ -20,6 +20,10 @@
   padding: 10px 0;
 }
 
+.header.menuOpen {
+  transform: none;
+}
+
 .inner {
   display: flex;
   align-items: center;
