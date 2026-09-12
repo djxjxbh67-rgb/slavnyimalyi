@@ -258,9 +258,21 @@ export default function Home() {
 
                 <div className={styles.reviewFooter}>
                   <span>Источник:</span>
-                  <span className={styles.reviewSource}>
-                    <span>📍</span> {item.source}
-                  </span>
+                  {item.source === "Яндекс.Карты" ? (
+                    <a
+                      href={reviewsData.yandex_badge?.link || "https://yandex.ru/maps/org/slavny_maly/195076948571/reviews/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.reviewSource}
+                      title="Читать отзыв на Яндекс.Картах"
+                    >
+                      <span>📍</span> {item.source} ↗
+                    </a>
+                  ) : (
+                    <span className={styles.reviewSource}>
+                      <span>📍</span> {item.source}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
