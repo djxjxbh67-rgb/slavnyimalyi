@@ -921,7 +921,66 @@
   color: var(--color-text-muted);
 }
 
+/* ==================== BOTTOM CTA ==================== */
+.ctaBottom {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3xl) 0;
+  width: 100%;
+}
 
+.blobBottom {
+  width: 350px;
+  height: 350px;
+  top: -50px;
+  right: -50px;
+}
+
+.ctaCard {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F8F5FF 0%, #FFF0F7 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.ctaCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 580px;
+}
+
+.ctaCardContent h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.ctaCardContent p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.ctaCardVisual {
+  flex-shrink: 0;
+}
+
+.ctaVisualBadge {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF6D6, #FFE270);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  box-shadow: 0 10px 30px rgba(255, 184, 0, 0.25);
+}
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
@@ -929,6 +988,9 @@
     padding-top: 85px;
     padding-bottom: 40px;
     min-height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .heroInner {
@@ -937,15 +999,21 @@
     align-items: center;
     text-align: center;
     gap: var(--space-md);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .heroContent {
     align-items: center;
     gap: var(--space-md);
+    width: 100%;
+    max-width: 100%;
   }
 
   .heroDesc {
     margin: 0 auto;
+    max-width: 100%;
   }
 
   .heroCtas {
@@ -962,6 +1030,7 @@
     margin: 0 auto;
     position: relative;
     flex-shrink: 0;
+    overflow: hidden;
   }
 
   .heroVisual .heroCard {
