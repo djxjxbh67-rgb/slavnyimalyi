@@ -42,6 +42,21 @@ export const metadata = {
     title: "Славный Малый — частный детский сад в Приморском районе СПб",
     description:
       "Запишитесь на бесплатный пробный день! Частный детский сад с группами от 1,5 до 7 лет. Работаем в субботу.",
+    images: [
+      {
+        url: "/images/gallery/playroom.png",
+        width: 1200,
+        height: 630,
+        alt: "Детский сад Славный Малый в Приморском районе СПб",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Славный Малый — частный детский сад в Приморском районе СПб",
+    description:
+      "Запишитесь на бесплатный пробный день! Частный детский сад с группами от 1,5 до 7 лет. Работаем в субботу.",
+    images: ["/images/gallery/playroom.png"],
   },
   robots: {
     index: true,
@@ -53,6 +68,12 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-icon.png",
+  },
+  other: {
+    "geo.region": "RU-SPE",
+    "geo.placename": "Санкт-Петербург, Приморский район",
+    "geo.position": "60.01998;30.27145",
+    "ICBM": "60.01998, 30.27145",
   },
 };
 
@@ -70,25 +91,23 @@ export default function RootLayout({ children }) {
               description:
                 "Частный детский сад и центр развития в Приморском районе СПб",
               url: "https://slavniymaliy.ru",
+              image: "https://slavniymaliy.ru/images/gallery/playroom.png",
               telephone: "+79500383731",
-              address: [
-                {
-                  "@type": "PostalAddress",
-                  streetAddress: "ул. Парашютная, д. 23, к. 1",
-                  addressLocality: "Санкт-Петербург",
-                  addressRegion: "Санкт-Петербург",
-                  postalCode: "197348",
-                  addressCountry: "RU",
-                },
-                {
-                  "@type": "PostalAddress",
-                  streetAddress: "ул. Парашютная, д. 23, к. 2",
-                  addressLocality: "Санкт-Петербург",
-                  addressRegion: "Санкт-Петербург",
-                  postalCode: "197348",
-                  addressCountry: "RU",
-                },
-              ],
+              email: "slavnyimalyispb@gmail.com",
+              sameAs: ["https://t.me/+79500383731"],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "ул. Парашютная, д. 23, к. 1",
+                addressLocality: "Санкт-Петербург",
+                addressRegion: "Санкт-Петербург",
+                postalCode: "197348",
+                addressCountry: "RU",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "60.01998",
+                longitude: "30.27145",
+              },
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -100,7 +119,7 @@ export default function RootLayout({ children }) {
                     "Friday",
                   ],
                   opens: "08:00",
-                  closes: "20:00",
+                  closes: "19:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",

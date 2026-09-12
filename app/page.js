@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import imgPlayroom from "../public/images/gallery/playroom.png";
-import teamData from "../content/Команда.json";
 import promoData from "../content/Промо_акция.json";
 import content from "../content/Главная.json";
+import reviewsData from "../content/Отзывы.json";
+import contactsData from "../content/Контакты.json";
+import docsData from "../content/Документы.json";
 
 export default function Home() {
   return (
@@ -47,6 +49,22 @@ export default function Home() {
               <div className={styles.heroEmoji}>🦔</div>
               <div className={styles.heroCardRing1} />
               <div className={styles.heroCardRing2} />
+              <svg className={styles.heroTextSvg} viewBox="0 0 700 700" aria-hidden="true">
+                <defs>
+                  <path id="heroTopCurve" d="M 75,350 A 275,275 0 0,1 625,350" fill="none" />
+                  <path id="heroBottomCurve" d="M 75,350 A 275,275 0 0,0 625,350" fill="none" />
+                </defs>
+                <text className={styles.heroCurvedTextTop}>
+                  <textPath href="#heroTopCurve" startOffset="50%" textAnchor="middle">
+                    СЛАВНЫЙ
+                  </textPath>
+                </text>
+                <text className={styles.heroCurvedTextBottom}>
+                  <textPath href="#heroBottomCurve" startOffset="50%" textAnchor="middle">
+                    МАЛЫЙ
+                  </textPath>
+                </text>
+              </svg>
             </div>
           </div>
         </div>
@@ -150,49 +168,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==================== TEAM ==================== */}
-      <section className={`section ${styles.teamSection}`} id="team">
-        <div className="container">
-          <h2 className="text-center animate-fade-in-up">
-            {content.team.title_main} <span className="text-gradient">{content.team.title_gradient}</span>
-          </h2>
-          <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
-            {content.team.subtitle}
-          </p>
-
-          <div className={styles.teamGrid}>
-            {teamData.members.slice(0, 4).map((member, i) => (
-              <div
-                key={i}
-                className={`card animate-fade-in-up delay-${i + 1} ${styles.teamCard}`}
-              >
-                <div className={styles.teamAvatar}>
-                  {member.photo ? (
-                    <Image
-                      src={`/images/team/${member.photo}`}
-                      alt={member.name}
-                      width={88}
-                      height={88}
-                      className={styles.teamPhoto}
-                    />
-                  ) : (
-                    <span>{member.emoji}</span>
-                  )}
-                </div>
-                <h3>{member.name}</h3>
-                <span className={styles.teamRole}>{member.role}</span>
-                <p>{member.education}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center" style={{ marginTop: "var(--space-xl)" }}>
-            <Link href="/team/" className="btn btn-secondary" id="team-all-cta">
-              Вся команда →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ==================== DOCUMENTS ==================== */}
       <section className={`section section-alt ${styles.docsSection}`} id="documents">
         <div className="container">
@@ -202,10 +177,143 @@ export default function Home() {
           <p className={`text-center animate-fade-in-up delay-1 ${styles.sectionDesc}`}>
             {content.documents.subtitle}
           </p>
-          <div className="text-center animate-fade-in-up delay-2">
-            <Link href="/documents/" className="btn btn-primary" id="docs-cta">
-              {content.documents.cta}
+          <div className={styles.docsGrid}>
+            {docsData.categories?.map((cat, i) => (
+              <div key={i} className={`card animate-fade-in-up delay-${i + 1} ${styles.docsCard}`}>
+                <div className={styles.docsCardIcon}>{cat.icon}</div>
+                <h3>{cat.title}</h3>
+                <ul className={styles.docsList}>
+                  {cat.items?.map((item, j) => (
+                    <li key={j}>
+                      <span className={styles.docsCheck}>✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center animate-fade-in-up delay-2" style={{ marginTop: "var(--space-2xl)" }}>
+            <Link href="/documents/" className="btn btn-secondary" id="docs-cta">
+              {content.documents.cta} →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== REVIEWS ==================== */}
+      <section className={`section ${styles.reviewsSection}`} id="reviews">
+        <div className="container">
+          <div className="text-center">
+            <span className="badge animate-fade-in-up">{reviewsData.badge}</span>
+            <h2 className="animate-fade-in-up delay-1">
+              {reviewsData.title_main}
+              <span className="text-gradient">{reviewsData.title_gradient}</span>
+            </h2>
+            <p className={`animate-fade-in-up delay-2 ${styles.sectionDesc}`}>
+              {reviewsData.subtitle}
+            </p>
+
+            {reviewsData.yandex_badge && (
+              <a
+                href={reviewsData.yandex_badge.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`animate-fade-in-up delay-2 ${styles.ratingBanner}`}
+                title="Смотреть отзывы на Яндекс.Картах"
+              >
+                <span className={styles.ratingBannerStars}>★★★★★</span>
+                <span className={styles.ratingScore}>{reviewsData.yandex_badge.rating}</span>
+                <span>•</span>
+                <span>{reviewsData.yandex_badge.text}</span>
+                <span className={styles.ratingCount}>({reviewsData.yandex_badge.reviews_count})</span>
+                <span>↗</span>
+              </a>
+            )}
+          </div>
+
+          <div className={styles.reviewsGrid}>
+            {reviewsData.reviews.map((item, i) => (
+              <div
+                key={item.id || i}
+                className={`${styles.reviewCard} animate-fade-in-up delay-${i + 1}`}
+              >
+                <div className={styles.reviewHeader}>
+                  <div className={styles.reviewAvatar}>{item.avatar}</div>
+                  <div className={styles.reviewAuthorInfo}>
+                    <h3>{item.name}</h3>
+                    <span className={styles.reviewMeta}>{item.meta}</span>
+                  </div>
+                </div>
+
+                <div className={styles.reviewRatingRow}>
+                  <span className={styles.reviewStars}>
+                    {"★".repeat(item.rating)}
+                  </span>
+                  <span className={styles.reviewDate}>{item.date}</span>
+                </div>
+
+                <p className={styles.reviewText}>«{item.text}»</p>
+
+                <div className={styles.reviewFooter}>
+                  <span>Источник:</span>
+                  <span className={styles.reviewSource}>
+                    <span>📍</span> {item.source}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== LOCATION / MAP ==================== */}
+      <section className={`section ${styles.mapSection}`} id="location">
+        <div className="container">
+          <div className="text-center">
+            <span className="badge animate-fade-in-up">📍 Как нас найти</span>
+            <h2 className="animate-fade-in-up delay-1">
+              Приходите <span className="text-gradient">в гости</span>
+            </h2>
+            <p className={`animate-fade-in-up delay-2 ${styles.sectionDesc}`}>
+              Мы находимся в Приморском районе Санкт-Петербурга. Ждём вас и вашего малыша на знакомство!
+            </p>
+          </div>
+
+          <div className={`${styles.mapWrapper} animate-fade-in-up delay-2`}>
+            <iframe
+              src={contactsData.map.url}
+              className={styles.mapFrame}
+              title="Детский сад Славный Малый — ул. Парашютная, 23, корпус 1"
+              loading="lazy"
+            />
+          </div>
+
+          <div className={`${styles.mapInfoBar} animate-fade-in-up delay-3`}>
+            <div className={styles.mapInfoCard}>
+              <span className={styles.mapInfoIcon}>📍</span>
+              <div className={styles.mapInfoText}>
+                <h4>Адрес садика</h4>
+                <p>ул. Парашютная, д. 23, к. 1</p>
+              </div>
+            </div>
+
+            <div className={styles.mapInfoCard}>
+              <span className={styles.mapInfoIcon}>🚇</span>
+              <div className={styles.mapInfoText}>
+                <h4>Метро рядом</h4>
+                <p>Комендантский пр., Пионерская</p>
+              </div>
+            </div>
+
+            <div className={styles.mapInfoCard}>
+              <span className={styles.mapInfoIcon}>🕒</span>
+              <div className={styles.mapInfoText}>
+                <h4>Режим работы</h4>
+                <p>Пн–Пт: 08:00 – 19:00</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

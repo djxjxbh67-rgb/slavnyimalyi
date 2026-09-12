@@ -5,7 +5,7 @@ export const metadata = {
   title: "Старшая группа (3–7 лет)",
   description:
     "Старшая группа детского сада «Славный Малый»: подготовка к школе, английский язык, логика и творчество для детей от 3 до 7 лет. Приморский район СПб.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/groups/senior/" },
+  alternates: { canonical: "https://slavniymaliy.ru/groups/senior" },
 };
 
 export default function SeniorGroupPage() {

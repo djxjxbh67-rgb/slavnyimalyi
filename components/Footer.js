@@ -38,7 +38,6 @@ export default function Footer() {
               <li><Link href="/groups/">Группы</Link></li>
               <li><Link href="/services/">Услуги</Link></li>
               <li><Link href="/pricing/">Цены</Link></li>
-              <li><Link href="/team/">Команда</Link></li>
               <li><Link href="/documents/">Документы</Link></li>
               <li><Link href="/contacts/">Контакты</Link></li>
             </ul>
@@ -55,8 +54,7 @@ export default function Footer() {
                 <a href="mailto:slavnyimalyispb@gmail.com">slavnyimalyispb@gmail.com</a>
               </li>
               <li>ул.&nbsp;Парашютная&nbsp;23/1</li>
-              <li>ул.&nbsp;Парашютная&nbsp;23/2</li>
-              <li>Пн‑Пт: 8:00 – 20:00</li>
+              <li>Пн‑Пт: 8:00 – 19:00</li>
             </ul>
           </div>
 

@@ -5,7 +5,7 @@ export const metadata = {
   title: "Пакет документов",
   description:
     "Список документов для поступления в частный детский сад «Славный Малый»: медицинская справка, анализы, свидетельство о рождении, прививочный сертификат.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/documents/" },
+  alternates: { canonical: "https://slavniymaliy.ru/documents" },
 };
 
 export default function DocumentsPage() {

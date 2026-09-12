@@ -5,7 +5,7 @@ export const metadata = {
   title: "Младшая группа (1,5–3 года)",
   description:
     "Младшая группа детского сада «Славный Малый»: мягкая адаптация, развитие речи, сенсорные игры и творчество для малышей от 1,5 до 3 лет в Приморском районе СПб.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/groups/young/" },
+  alternates: { canonical: "https://slavniymaliy.ru/groups/young" },
 };
 
 export default function YoungGroupPage() {

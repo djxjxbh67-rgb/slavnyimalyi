@@ -4,8 +4,8 @@ import content from "../../content/Контакты.json";
 export const metadata = {
   title: "Контакты",
   description:
-    "Контактная информация частного детского сада «Славный Малый» в Приморском районе СПб. Адреса: ул. Парашютная 23/1 и 23/2. Запись по телефону.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/contacts/" },
+    "Контактная информация частного детского сада «Славный Малый» в Приморском районе СПб. Адрес: ул. Парашютная 23/1. Запись по телефону.",
+  alternates: { canonical: "https://slavniymaliy.ru/contacts" },
 };
 
 export default function ContactsPage() {

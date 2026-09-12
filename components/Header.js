@@ -10,7 +10,6 @@ const navLinks = [
     href: "/about/",
     label: "О нас",
     children: [
-      { href: "/team/", label: "Наша команда" },
       { href: "/documents/", label: "Пакет документов" },
     ],
   },

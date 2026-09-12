@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 export const metadata = {
   title: "Услуги центра развития",
   description:
-    "Дополнительные услуги детского центра «Славный Малый»: логопед, английский язык, подготовка к школе. Индивидуальные и групповые занятия в Приморском районе СПб.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/services/" },
+    "Дополнительные услуги детского центра «Славный Малый»: логопед, подготовка к школе, фортепиано, вокал. Индивидуальные и групповые занятия в Приморском районе СПб.",
+  alternates: { canonical: "https://slavniymaliy.ru/services" },
 };
 
 import content from "../../content/Услуги.json";

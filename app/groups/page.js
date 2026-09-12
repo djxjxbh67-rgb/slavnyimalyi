@@ -6,7 +6,7 @@ export const metadata = {
   title: "Группы",
   description:
     "Группы детского сада «Славный Малый»: младшая (1,5–3 года) и старшая (3–7 лет). Узнайте о программе развития и занятиях.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/groups/" },
+  alternates: { canonical: "https://slavniymaliy.ru/groups" },
 };
 
 export default function GroupsPage() {

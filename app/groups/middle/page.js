@@ -5,7 +5,7 @@ export const metadata = {
   title: "Средняя группа (3–4,5 года)",
   description:
     "Средняя группа детского сада «Славный Малый»: активное познание мира, творческое развитие, первые математические представления и социализация для детей 3-4,5 лет.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/groups/middle/" },
+  alternates: { canonical: "https://slavniymaliy.ru/groups/middle" },
 };
 
 export default function MiddleGroupPage() {

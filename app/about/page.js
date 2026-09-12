@@ -11,7 +11,7 @@ export const metadata = {
   title: "О нас",
   description:
     "Узнайте больше о частном детском саде «Славный Малый» в Приморском районе СПб. Наши ценности, методики развития и команда воспитателей.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/about/" },
+  alternates: { canonical: "https://slavniymaliy.ru/about" },
 };
 
 export default function AboutPage() {

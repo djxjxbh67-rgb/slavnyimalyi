@@ -5,7 +5,7 @@ export const metadata = {
   title: "Цены и тарифы",
   description:
     "Стоимость посещения частного детского сада «Славный Малый» в Приморском районе СПб. Прозрачные тарифы, рабочая суббота, пробный день бесплатно.",
-  alternates: { canonical: "https://slavnyimalyi.spb.ru/pricing/" },
+  alternates: { canonical: "https://slavniymaliy.ru/pricing" },
 };
 
 export default function PricingPage() {
@@ -51,7 +51,10 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href="tel:+79500383731" className="btn btn-primary">
+                  <a 
+                    href="tel:+79500383731" 
+                    className={`btn ${i === 0 ? 'btn-teal' : (i === 1 ? 'btn-primary' : 'btn-secondary')}`}
+                  >
                     Записаться
                   </a>
                 </div>
