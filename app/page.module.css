@@ -663,6 +663,19 @@
   color: var(--color-text);
   font-weight: 600;
   font-size: 0.95rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ratingStarsGroup,
+.ratingTextGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ratingDot {
+  color: var(--color-text-light);
 }
 
 .ratingBanner:hover {
@@ -1057,6 +1070,42 @@
 
   .mapInfoBar {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ratingBanner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 20px;
+    border-radius: var(--radius-lg);
+    font-size: 0.88rem;
+    max-width: calc(100% - 32px);
+    width: auto;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .ratingDot {
+    display: none;
+  }
+
+  .ratingStarsGroup {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+  }
+
+  .ratingTextGroup {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    justify-content: center;
+    text-align: center;
   }
 }
 

@@ -223,12 +223,16 @@ export default function Home() {
                 className={`animate-fade-in-up delay-2 ${styles.ratingBanner}`}
                 title="Смотреть отзывы на Яндекс.Картах"
               >
-                <span className={styles.ratingBannerStars}>★★★★★</span>
-                <span className={styles.ratingScore}>{reviewsData.yandex_badge.rating}</span>
-                <span>•</span>
-                <span>{reviewsData.yandex_badge.text}</span>
-                <span className={styles.ratingCount}>({reviewsData.yandex_badge.reviews_count})</span>
-                <span>↗</span>
+                <div className={styles.ratingStarsGroup}>
+                  <span className={styles.ratingBannerStars}>★★★★★</span>
+                  <span className={styles.ratingScore}>{reviewsData.yandex_badge.rating}</span>
+                </div>
+                <span className={styles.ratingDot}>•</span>
+                <div className={styles.ratingTextGroup}>
+                  <span>{reviewsData.yandex_badge.text}</span>
+                  <span className={styles.ratingCount}>({reviewsData.yandex_badge.reviews_count})</span>
+                  <span>↗</span>
+                </div>
               </a>
             )}
           </div>
