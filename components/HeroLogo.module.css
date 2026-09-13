@@ -64,15 +64,17 @@
 
 @media (max-width: 900px) {
   .heroCard {
-    width: min(270px, 72vw);
-    height: min(270px, 72vw);
+    width: min(260px, 68vw);
+    height: min(260px, 68vw);
   }
 
   .heroCardRing1 {
-    inset: -15px;
+    inset: -8px;
+    border-width: 1.5px;
   }
 
   .heroCardRing2 {
-    inset: -30px;
+    inset: -16px;
+    border-width: 1.5px;
   }
 }

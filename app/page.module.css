@@ -917,7 +917,7 @@
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
   .hero {
-    padding-top: 85px;
+    padding-top: 105px;
     padding-bottom: 40px;
     min-height: auto;
     width: 100%;
@@ -960,7 +960,7 @@
     width: 100%;
     max-width: 340px;
     height: auto;
-    margin: 0 auto;
+    margin: 18px auto 26px;
     position: relative;
     flex-shrink: 0;
   }
