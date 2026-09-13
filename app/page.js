@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import HeroLogo from "../components/HeroLogo";
 import imgPlayroom from "../public/images/gallery/playroom.png";
 import promoData from "../content/Промо_акция.json";
 import content from "../content/Главная.json";
@@ -45,18 +46,7 @@ export default function Home() {
           </div>
 
           <div className={`${styles.heroVisual} animate-scale-in delay-3`}>
-            <div className={styles.heroCard}>
-              <div className={styles.heroCardRing1} />
-              <div className={styles.heroCardRing2} />
-              <Image
-                src="/images/logo.webp"
-                alt="Детский сад «Славный Малый»"
-                width={470}
-                height={470}
-                priority
-                className={styles.heroLogoImg}
-              />
-            </div>
+            <HeroLogo />
           </div>
         </div>
       </section>
