@@ -71,85 +71,54 @@
 
 .heroCard {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: min(470px, 42vw);
+  height: min(470px, 42vw);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
   border-radius: 50%;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.12));
+  transition: transform 0.4s var(--ease-spring);
 }
 
-.heroEmoji {
-  font-size: 8rem;
-  animation: float 4s ease-in-out infinite;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+.heroCard:hover {
+  transform: scale(1.03);
+}
+
+.heroLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .heroCardRing1,
 .heroCardRing2 {
   position: absolute;
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .heroCardRing1 {
-  width: 370px;
-  height: 370px;
-  border: 2px dashed rgba(255, 255, 255, 0.6);
-  opacity: 0.55;
+  inset: -25px;
+  border: 2px dashed rgba(255, 255, 255, 0.65);
+  opacity: 0.6;
   animation: spin 35s linear infinite;
 }
 
 .heroCardRing2 {
-  width: 430px;
-  height: 430px;
-  border: 2px dashed rgba(255, 255, 255, 0.4);
+  inset: -50px;
+  border: 2px dashed rgba(255, 255, 255, 0.45);
   opacity: 0.5;
   animation: spin 50s linear infinite reverse;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
-}
-
-.heroTextSvg {
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  max-width: none !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 2;
-  overflow: visible;
-}
-
-.heroCurvedTextTop {
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
-  font-size: 68px;
-  font-weight: 900;
-  letter-spacing: 13px;
-  fill: #FFFFFF;
-  stroke: #FF54AE;
-  stroke-width: 7px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  paint-order: stroke fill;
-}
-
-.heroCurvedTextBottom {
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
-  font-size: 68px;
-  font-weight: 900;
-  letter-spacing: 19px;
-  fill: #FFFFFF;
-  stroke: #FF54AE;
-  stroke-width: 7px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  paint-order: stroke fill;
 }
 
 /* ==================== SECTION DESC ==================== */
@@ -1038,18 +1007,30 @@
     order: -1;
     justify-content: center;
     align-items: center;
-    width: 230px;
-    height: 230px;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
     margin: 0 auto;
     position: relative;
     flex-shrink: 0;
-    overflow: hidden;
   }
 
   .heroVisual .heroCard {
-    transform: scale(0.33);
-    transform-origin: center center;
-    flex-shrink: 0;
+    width: min(270px, 72vw);
+    height: min(270px, 72vw);
+    transform: none;
+  }
+
+  .heroVisual .heroCard:hover {
+    transform: none;
+  }
+
+  .heroCardRing1 {
+    inset: -15px;
+  }
+
+  .heroCardRing2 {
+    inset: -30px;
   }
 
   .advantagesGrid {

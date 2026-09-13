@@ -46,25 +46,16 @@ export default function Home() {
 
           <div className={`${styles.heroVisual} animate-scale-in delay-3`}>
             <div className={styles.heroCard}>
-              <div className={styles.heroEmoji}>🦔</div>
               <div className={styles.heroCardRing1} />
               <div className={styles.heroCardRing2} />
-              <svg className={styles.heroTextSvg} viewBox="0 0 700 700" aria-hidden="true">
-                <defs>
-                  <path id="heroTopCurve" d="M 75,350 A 275,275 0 0,1 625,350" fill="none" />
-                  <path id="heroBottomCurve" d="M 75,350 A 275,275 0 0,0 625,350" fill="none" />
-                </defs>
-                <text className={styles.heroCurvedTextTop}>
-                  <textPath href="#heroTopCurve" startOffset="50%" textAnchor="middle">
-                    СЛАВНЫЙ
-                  </textPath>
-                </text>
-                <text className={styles.heroCurvedTextBottom}>
-                  <textPath href="#heroBottomCurve" startOffset="50%" textAnchor="middle">
-                    МАЛЫЙ
-                  </textPath>
-                </text>
-              </svg>
+              <Image
+                src="/images/logo.webp"
+                alt="Детский сад «Славный Малый»"
+                width={470}
+                height={470}
+                priority
+                className={styles.heroLogoImg}
+              />
             </div>
           </div>
         </div>
