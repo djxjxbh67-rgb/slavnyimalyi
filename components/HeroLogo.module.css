@@ -21,46 +21,18 @@
   transform: scale(0.98);
 }
 
-.heroLogoImg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  user-select: none;
-  -webkit-user-drag: none;
-  display: block;
-}
-
-.hedgehogVideoWrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60.5%;
-  height: 60.5%;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.hedgehogVideo {
+.heroLogoVideo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
   display: block;
-  transition: opacity 0.25s ease;
-}
-
-.videoActive {
-  opacity: 1;
-}
-
-.videoIdle {
-  opacity: 0;
+  mask-image: radial-gradient(circle, #000 98%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, #000 98%, transparent 100%);
+  background-color: #FFFFFF;
 }
 
 .heroCardRing1,
